@@ -1,25 +1,37 @@
-<?php include("addserver.php");
-?>
+<?php include('Addserver.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>add</title>
-	<h2 align="center">Add a query</h2>
+	<title>Add Query</title>
+	<link rel="stylesheet" type="text/css" href="Addstyle.css">
 </head>
 <body>
-	<div align="center">
-		<form method="POST" action="add.php">
-		<font style="font-family: comic sans ms;">Select department:</font>
-			<select name="select" required>
-				<option hidden>Enter department</option>
-				<option value="cs">CS</option>
-				<option value="bba">BBA</option>
-			</select><br>
-
-			<font style="font-family: comic sans ms; float: left; margin-left: 480px;">Enter Query:</font>
-			<textarea style="width: 200px;height:50px;float: left" placeholder="enter query" name="text" required></textarea><br><br><br><br>
-			<input type="submit" name="submit" value="submit" id="submit">
-		</form>
-	</div>
+	<form method="POST" action="Add.php">
+	<table align="center" class="table" width="400" height="200">
+			<tr>
+				<th></th><th></th>
+			</tr>
+		    <tr>
+				<td align="center" colspan="2"><h3><font>RTI</font></h3></td>
+			</tr>
+			<tr>
+				<td>Query</td><td><textarea class="text" name="text" placeholder="Enter Your Query"></textarea></td>
+			</tr>
+			<tr>
+				<td>Department</td>
+				<td>
+					<select name="Department">
+						<option hidden="">Select</option>
+						<option value="Medical">Medical</option>
+						<option value="Traffic">Traffic</option>
+						<option value="Education">Education</option>
+				    </select>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" colspan="2"><button name="Submit">Submit</button></td>
+			</tr>
+	</table>
+	</form>
 </body>
 </html>
