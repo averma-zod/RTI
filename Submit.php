@@ -1,12 +1,13 @@
+
+                <script type="text/javascript">
+                    window.alert("SUCCESS");
+                </script>
 <?php
      $db = mysqli_connect('localhost','root','','rti');
      $query = "SELECT * FROM view";
      $sql = mysqli_query($db,$query);
-     $number = mysqli_num_rows($sql);
 
-     echo $number;
-
-     while($row = mysqli_fetch_array($sql))
+     while($row = mysqli_fetch_array($sql,MYSQL_ASSOC))
      {
         $q = $row['Query'];
         $r = $row['Department'];

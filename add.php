@@ -15,9 +15,6 @@
 				<td align="center" colspan="2"><h3><font>RTI</font></h3></td>
 			</tr>
 			<tr>
-				<td>Query</td><td><textarea class="text" name="text" placeholder="Enter Your Query"></textarea></td>
-			</tr>
-			<tr>
 				<td>Department</td>
 				<td>
 					<select name="Department">
@@ -27,6 +24,9 @@
 						<option value="Education">Education</option>
 				    </select>
 				</td>
+			</tr>
+			<tr>
+				<td>Query</td><td><textarea class="text" name="text" placeholder="Enter Your Query"></textarea></td>
 			</tr>
 			<tr>
 				<td align="center" colspan="2"><button name="Submit">Submit</button></td>
