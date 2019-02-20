@@ -12,7 +12,7 @@
 				<th></th><th></th>
 			</tr>
 		    <tr>
-				<td align="center" colspan="2"><h3><font>RTI</font></h3></td>
+				<td align="center" colspan="2"><h3><font style="">RTI</font></h3></td>
 			</tr>
 			<tr>
 				<td>Department</td>

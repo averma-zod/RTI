@@ -15,3 +15,13 @@
         echo $r?><br><?php
      }
 ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <a href="Add.php"><button>Another Query</button></a>
+</body>
+</html>

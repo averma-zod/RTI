@@ -32,6 +32,10 @@
 		     {
 		        $q = $row['Query'];
 		        similar_text($Query, $q,$percent);
+
+		        $query = "UPDATE Query SET Percentage=$percent WHERE Query='$q'";
+	            $x = mysqli_query($db,$query);
+
 		        if($percent>$high)
 				{
 					$high=$percent;
