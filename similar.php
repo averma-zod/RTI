@@ -14,7 +14,7 @@
 
      while($row = mysqli_fetch_array($sql,MYSQL_ASSOC))
      {
-     	if($row['Percentage']>70)
+     	if($row['Percentage']>70 && $row['Department']==$_SESSION['dep'])
      	{
 	        $q = $row['Query'];
 	        $r = $row['Department'];
