@@ -28,7 +28,11 @@
 </head>
 <body style="background-color: #E6E6FA">
 	<form method="POST" action="Add.php">
-		<div style="background-color: #D8BFD8 ;width:650px; margin-left:23%;margin-right: 22%;height: 380px ;border-radius: 10px; padding-top:1px">
+		
+		<div align="center" 
+		style="background-color: 	#ADD8E6 ;width:650px; margin-left:23%;
+		margin-right: 22%;height: 380px ;border-radius: 10px; padding-top:1px">
+
 	<table align="center" class="table" width="400" height="200">
 			<tr>
 				<th></th><th></th>
