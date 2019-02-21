@@ -5,14 +5,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        table,th,tr,td{
+            border:1px solid #483D8B;
+            border-collapse: collapse;
+            padding:5px 100px 1px 10px;
+        }
+        button
+{
+    background: #778899;
+    border-radius: 4px;
+    box-shadow: 2px 5px 2px #2F4F4F;
+    color: white;
+    padding: 10px 24px;
+    margin: 10px 0 0 0;
+    outline: 0;
+    border: 0;
+    transition: all .1s linear;
+}
+button:active 
+{
+    box-shadow: 0 2px 0 #2F4F4F;
+    transform: translateY(3px);
+}
+    </style>
+<h1 align="center" style="font-family: garamond; color: #2F4F4F ;margin-top:40px"><?php session_start();echo  $_SESSION['Dept'];?> Queries</h1>
+
 </head>
-<body>
+<body style="background-color: #E6E6FA">
     <?php
      $db = mysqli_connect('localhost','root','','rti');
      $query = "SELECT * FROM view";
      $sql = mysqli_query($db,$query);
     ?>
-    <table>
+    <table align="center" style="margin-top: 20px">
         <thead>
             <th>Query</th>
             <th>Department</th>
@@ -37,8 +63,9 @@
               ?>
         </tbody>
     </table>
-    
-    <a href="Add.php"><button>Another Query</button></a>
+    <div align="center">
+        <a href="Add.php"><button class="button">Another Query</button></a>
+    </div>
 </body>
 </html>
 
