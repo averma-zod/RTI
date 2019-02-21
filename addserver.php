@@ -6,15 +6,13 @@
   {
   	 $Query = $_POST['text'];
   	 $Department = $_POST['Department'];
-  	 if(empty($Query))
-  	 {
-  	 	echo "Enter Query";
-  	 }
-  	 else
-  	 {
+  	 
+  	 
   	 	if($Department === 'Select')
   	 	{
-  	 		echo "Select Department";
+  	 		?><script>
+  	 			window.alert("Select Department");
+  	 		</script><?php
   	 	}
   	 	else
   	 	{
@@ -62,5 +60,5 @@
             }
   	 	}
   	 }
-  }
+  
 ?>
