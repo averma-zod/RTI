@@ -12,24 +12,24 @@
             padding:5px 100px 1px 10px;
         }
         button
-{
-    background: #778899;
-    border-radius: 4px;
-    box-shadow: 2px 5px 2px #2F4F4F;
-    color: white;
-    padding: 10px 24px;
-    margin: 10px 0 0 0;
-    outline: 0;
-    border: 0;
-    transition: all .1s linear;
-}
-button:active 
-{
-    box-shadow: 0 2px 0 #2F4F4F;
-    transform: translateY(3px);
-}
+        {
+            background: #778899;
+            border-radius: 4px;
+            box-shadow: 2px 5px 2px #2F4F4F;
+            color: white;
+            padding: 10px 24px;
+            margin: 10px 0 0 0;
+            outline: 0;
+            border: 0;
+            transition: all .1s linear;
+        }
+        button:active 
+        {
+            box-shadow: 0 2px 0 #2F4F4F;
+            transform: translateY(3px);
+        }
     </style>
-<h1 align="center" style="font-family: garamond; color: #2F4F4F ;margin-top:40px"><?php session_start();echo  $_SESSION['Dept'];?> Queries</h1>
+<h1 align="center" style="font-family: garamond; color: #2F4F4F ;margin-top:40px"><?php session_start();echo  $_SESSION['dep'];?> Queries</h1>
 
 </head>
 <body style="background-color: #E6E6FA">
@@ -42,7 +42,7 @@ button:active
         <thead>
             <th>Query</th>
             <th>Department</th>
-            <th>Percentage</th>
+            <th>Similarity %</th>
             <th>Status</th>
         </thead>
         <tbody>
