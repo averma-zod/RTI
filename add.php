@@ -9,11 +9,18 @@
 <body style="background-color:#110D21">
 	<form method="POST" action="Add.php">
 		
+<<<<<<< HEAD
 		<div style="background-color:#110D21; width:100%;height: 450px ;border-radius:10px; padding-top:1px; margin-top:4%;">
 		<div style="background-color: none">
 	      <font style="margin-left: 49%;font-size: 1.8em; font-family: garamond; color:#D0C8F2;">RTI</font>
 	      <a href="viewall.php" style="float: right;font-size: 1.7em; font-family: garamond; color:#D0C8F2;">View Queries</a>
   		</div>
+=======
+		<div align="center" 
+		style="background-color:#110D21 ;width:650px; margin-left:23%;
+		margin-right: 22%;height: 450px ;border-radius:10px; padding-top:1px; margin-top:3%;">
+      <h1 align="center" style="font-family: garamond; color:#D0C8F2;">RTI</h1>
+>>>>>>> 97def2d07260f31acfe096363d3cfd0c77a3ff4c
 	 <table align="center" class="table" width="400" height="200">
 			<tr>
 				<th></th><th></th>
