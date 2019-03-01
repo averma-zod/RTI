@@ -1,0 +1,56 @@
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 600px;
+	}
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100px;
+	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(orig.jpg);
+	background-size: cover;
+	display: table; 
+	}
+.Login {
+	border: 1px solid rgba(255,255,255,0.3);
+	border-radius: 5px;
+	padding: 3em;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+h2 {
+	margin-top: 0px;
+	font-family: Source Sans Pro;
+	font-weight: lighter;
+	color: #86af49;
+	font-size: 50px;
+	text-align: center;
+}
+input {
+	display: block;
+	width: 320px;
+	height: 50px;
+	background: rgba(0,0,0,0.3);
+	outline: none;
+	border: 1px solid rgba(0,0,0,0.5);
+	font-family: Source Sans Pro;
+	font-weight: lighter;
+	font-size: 14px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	border-radius: 5px;
+}
+button {
+	width: 332px;
+	height: 50px;
+	font-size: 16px;
+	background: #000;
+	font-weight: lighter;
+	color: #fff;
+	border: 0px;
+	border-radius: 5px;
+}
