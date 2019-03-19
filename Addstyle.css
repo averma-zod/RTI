@@ -12,6 +12,13 @@
 	background-color: #DCDCDC;
 }
 
+.header{
+	width:98%;
+	background-color: red;
+	padding: 10px;
+}
+
+
 .button
 {
 	background: #778899;

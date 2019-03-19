@@ -1,20 +1,24 @@
-<?php include('Add.php'); ?>
+<?php include('loginserver.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Login Form
-	</title>
-	<link rel="stylesheet" type="text/css" href="loginstyle.css">
+  <title>Login</title>
 </head>
 <body>
-	<div class="Login">
-		<form method="POST" action="Add.php">
-			<h2>Login</h2>
-			<input type="text" placeholder="Enter Username">
-			<input type="text" placeholder="Enter Password">
-			<input type="button" onclick="Add.php">
-		</form>
-	</div>
+  <form method="POST" action="login.php">
+    <table>
+      <tbody>
+        <tr>
+          <td>Username</td><td><input type="text" name="Name" placeholder="Enter Username"></td>
+        </tr>
+        <tr>
+          <td>Password</td><td><input type="Password" name="Password" placeholder="Enter Password"></td>
+        </tr>
+         <tr>
+          <td colspan="2"><input type="Submit" name="Submit" Value="Login"></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
 </body>
 </html>

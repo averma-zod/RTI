@@ -29,7 +29,7 @@
             transform: translateY(3px);
         }
     </style>
-<h1 align="center" style="font-family: garamond; color: #2F4F4F ;margin-top:40px"><?php session_start();echo  $_SESSION['dep'];?> Queries</h1>
+<h1 align="center" style="font-family: garamond; color: #2F4F4F ;margin-top:40px"><?php session_start();echo  $_SESSION['Dept'];?> Queries</h1>
 
 </head>
 <body style="background-color: #E6E6FA">

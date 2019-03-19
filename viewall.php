@@ -13,11 +13,20 @@
 </head>
 <body style="background-color: #E6E6FA">
 	<?php
-	$db = mysqli_connect('localhost','root','','rti');
-     $query = "SELECT * FROM Query";
-     $sql = mysqli_query($db,$query);
-
-?>
+     session_start();
+     $db = mysqli_connect('localhost','root','','rti');
+     $name = $_SESSION['Username'];
+	 if($name == 'Admin')
+     {
+        $query = "SELECT * FROM Query";
+        $sql = mysqli_query($db,$query);
+     }
+     else
+     {
+        $query = "SELECT * FROM Query WHERE Name='$name'";
+        $sql = mysqli_query($db,$query);
+     }
+    ?>
 <table align="center" style="margin-top: 20px">
         <thead>
             <th>Query</th>

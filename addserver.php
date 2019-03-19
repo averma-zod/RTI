@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $Name = $_SESSION['Username'];
   $db = mysqli_connect('localhost','root','','rti');
 
   if(isset($_POST['Submit']))
@@ -18,7 +19,8 @@
   	 	{
   	 		?><script>
           window.alert("Select Department");
-        </script><?php
+        </script>
+        <?php
   	 	}
   	 	else
   	 	{
@@ -48,15 +50,15 @@
 		    }
 		    if($high<70)
 		    {
-	        $query = "INSERT INTO Query(Query,Department,Date,Status) values('$Query','$Department','$Date','Unsolved')";
+	        $query = "INSERT INTO Query(Name,Query,Department,Date,Status) values('$Name','$Query','$Department','$Date','Unsolved')";
 	        $q = mysqli_query($db,$query);
 
-	        $query = "CREATE OR REPLACE VIEW view AS SELECT Query,Department,Percentage,Status FROM Query WHERE Department='$Department'";
+	        $query = "CREATE OR REPLACE VIEW view AS SELECT Query,Department,Percentage,Statusz FROM Query WHERE Department='$Department'";
 	            $q = mysqli_query($db,$query);
 				
 
 	            $_SESSION['Dept'] = $Department;
-	            header('Location:Submit.php');
+              header('Location:Submit.php');
 	            
           }
           else
