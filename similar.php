@@ -18,7 +18,7 @@
 		.btn{
 			margin-top: 12px;
 		}
-		button
+		.btnn
         {
             background: #778899;
             border-radius: 4px;
@@ -30,7 +30,7 @@
             border: 0;
             transition: all .1s linear;
         }
-        button:active 
+        .btnn:active 
         {
             box-shadow: 0 2px 0 #2F4F4F;
             transform: translateY(3px);
@@ -38,8 +38,8 @@
 	</style>
 </head>
 <body style="background-color: #E6E6FA">
-	<div align="center">
-	    <div>
+ <form method="POST" action="similar.php">
+	    <div align="center">
 	    	<font style="font-size: 1.4em;font-family: garamond;font-weight: bold;">Your Query:</font>
 	    		<font style="font-size: 1.4em;font-family: garamond;font-weight: bold;color:slateblue"><?php echo $_SESSION['qu'];?></font><br>
 	    <font style="font-size: 1.5em; font-family: garamond">The Similar Queries are:</font>
@@ -54,6 +54,8 @@
             <th>Department</th>
             <th>Similarity %</th>
             <th>Date</th>
+            <th>Answer</th>
+            <th>Add</th>
         </thead>
         <tbody>
         <?php
@@ -62,10 +64,13 @@
      	    if($row['Percentage']>70 && $row['Department']==$_SESSION['dep'])
      	    {
      	    	?><tr><?php
+     	    	$id = $row['id'];
 	            $q = $row['Query'];
 	            $r = $row['Department'];
 	            $p = $row['Percentage'];
 	            $d = $row['Date'];
+	            $ans = $row['Answer'];
+	            $status = $row['Status'];
 
 
 	            $xx=explode(" ", $q);
@@ -93,17 +98,60 @@
 	            <td><?php echo $r;?></td>
 	            <td><?php echo $p;?></td>
 	            <td><?php echo $d;?></td>
+	            <td><?php echo $ans;?></td>
+
+	            <td><?php 
+	                if($status == 'Solved')
+	                {
+	                	?><button name="Add" value="<?=$id?>">Show Answer</button><?php
+	                }
+	                else
+	                {
+	                	echo 'No Answer';
+	                }
+	            ?>
+	            </td>
 	            </tr><?php
 	        }
 	    }
-       
         ?>
-        </div>
-        <div class="btn">
+    </tbody>
+</table>
+        <div class="btn" align="center">
         	<font style="font-family: garamond;font-size: 1.2em">Add Anyway?</font><br>
-         <a href="anyway.php"><button class="button">YES</button></a>
-	     <a href="Add.php"><button class="button">NO</button></a>
+         <button name="Yes" class="btnn">YES</button>
+	     <button name="No" class="btnn">NO</button>
 	    </div>
 	</div>
+ </form>
 </body>
 </html>
+
+
+<?php
+    if(isset($_POST['Add']))
+    { 
+    	
+        
+        $a = $_POST['Add'];
+    	$sql = "SELECT * FROM Query WHERE id='$a'";    
+        $result = mysqli_query($db,$sql);
+        $roow = $result->fetch_assoc();
+    	$anss = $roow['Answer'];
+    	
+    	$_SESSION['lastpage'] = 'Similar';
+    	$_SESSION['did'] = $anss;
+    	header('Location:Submit.php');
+    }
+
+   
+    else if(isset($_POST['Yes']))
+    {
+    	header('Location:anyway.php');
+    }    
+
+    else if(isset($_POST['No']))
+    {
+    	header('Location:Add.php');
+    }
+?>

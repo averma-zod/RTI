@@ -44,6 +44,7 @@
 		  		  if($Password == $row['Password'] )
 		     	  {
 			         $_SESSION['Type']='Admin';
+			         $_SESSION['Username']=$Username;
 			         header('Location:viewall.php');
 	  			  }
 	      		  else

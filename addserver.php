@@ -58,8 +58,8 @@
 				
 
 	            $_SESSION['Dept'] = $Department;
-              header('Location:Submit.php');
-	            
+              $_SESSION['lastpage'] = 'Add';
+              header('Location:Submit.php');  
           }
           else
           {
