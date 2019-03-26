@@ -15,7 +15,7 @@
   	 }
   	 else
   	 {
-  	 	if($Department === 'Select')
+  	 	if($Department == 'Select')
   	 	{
   	 		?><script>
           window.alert("Select Department");

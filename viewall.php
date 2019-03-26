@@ -15,8 +15,9 @@
 	<?php
      session_start();
      $db = mysqli_connect('localhost','root','','rti');
+     $type = $_SESSION['Type'];
      $name = $_SESSION['Username'];
-	 if($name == 'Admin')
+	 if($type == 'Admin')
      {
         $query = "SELECT * FROM Query";
         $sql = mysqli_query($db,$query);
@@ -33,6 +34,7 @@
             <th>Department</th>
             <th>Date</th>
             <th>Status</th>
+            <th>Answer</th>
         </thead>
         <tbody>
             <?php
@@ -42,12 +44,14 @@
                 $r = $row['Department'];
                 $p = $row['Date'];
                 $s = $row['Status'];
+                $ans = $row['Answer'];
         
             ?>
                 <td><?php echo $q; ?></td>
                 <td><?php echo $r; ?></td>
                 <td><?php echo $p; ?></td>
-                <td><?php echo $s; ?></td></tr><?php
+                <td><?php echo $s; ?></td>
+                <td><?php echo $ans; ?></td></tr><?php
               }
               ?>
         </tbody>

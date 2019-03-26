@@ -12,17 +12,8 @@
 		<div class="header">
 	      RTI
 	      <a href="viewall.php">
-	      	<?php
-	      	   $username=$_SESSION['Username'];
-	      	   if($username == 'Admin')
-	      	   {
-	      	   	 ?>View All Queries<?php
-	      	   }
-	      	   else
-	      	   {
-	      	   	?>View Your Queries<?php
-	      	   }
-	      	?>	      
+	      	View Your Queries
+	      	<?php echo $_SESSION['Username']; ?>
 	      </a>
   		</div>
 	 <table align="center" class="table" width="400" height="200">
