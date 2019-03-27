@@ -8,11 +8,23 @@
             border-collapse: collapse;
             padding:5px 100px 1px 10px;
         }
-    </style>
-    <h1 align="center" style="font-family: garamond">List of all Queries</h1>
+        .fl{
+            border:none;
+        }
+    </style><div style=" width: all;background-color: black; height: 150px; border-radius: 10px ;background-image: linear-gradient(to right,black)">
+
+            
+
+                <img align="middle" style=" box-shadow: 4px 2px 2px lightgrey; border-radius: 50%; margin-left:0%; width: 150px;height: 150px" src="RTI.png">
+                <font  style=" font-size:4.5em; font-family: garamond; color:white">RTI</font>
+                <font style="color: white;font-size: 3.4em; margin-left: 24%; font-family: garamond">List of all Queries</font>
+
+                
+        </div>
 </head>
-<body style="background-color: #E6E6FA">
-<form method="POST" action="viewall.php">
+
+
+<body style="background-color: white">
 	<?php
      session_start();
      $db = mysqli_connect('localhost','root','','rti');
@@ -28,8 +40,32 @@
         $query = "SELECT * FROM Query WHERE Name='$name'";
         $sql = mysqli_query($db,$query);
      }
-    ?>
-    <table align="center" style="margin-top: 20px">
+    ?><div style="width: 100%">
+    <div style="float: left; width: 200px;height: 400px;margin-top: 10px; background-color: lightgrey">
+        <b><font style=" font-size: 1.5em ; font-family: garamond;">Filter By:</font></b><br>
+
+
+        <form method="POST" action="filter.php">
+            <ul>
+                <li>
+                    <font style=" font-size: 1.3em ; font-family: garamond;">Date</font>
+                    <ul>
+                        <li><button class="fl" id="2019">2019</button></li>
+                        <li><button class="fl" id="2018">2018</button></li>
+                        <li><button class="fl" id="2017">2017</button></li>
+                    </ul>
+                </a></li>
+
+
+                <li><button class="fl">Status</button></li>
+                <li><button class="fl">Department</button></li>
+            </ul>
+        </form>
+
+    <form method="POST" action="Reply.php">
+    </div>
+
+    <table align="left" style=" margin-left: 10px; margin-top: 10px">
         <thead>
             <th>Query</th>
             <th>Department</th>
@@ -61,41 +97,44 @@
                   <td><?php echo $Query; ?></td>
                   <td><?php echo $Department; ?></td>
                   <td><?php echo $Date; ?></td>
-                  <td><?php echo $Status; ?></td>
+                  <td><?php echo $Status;?></td>
                   <td><?php echo $Answer; ?></td>
-                  <td><?php
+                  <td ><?php
                     if($type == 'Admin')
                     {
                  	   if($Status == 'Unsolved')
                  	   {
-                 		 ?><button value="<?=$id ?>" name="Usolve">Reply</button><?php
+                 		 ?><button onclick="unsolve()" value="<?=$id ?>" name="Usolve">Reply</button><?php
                  	   }
                  	   elseif ($Status == 'Solved') 
                  	   {
-                 		 ?><button value="<?=$id ?>" name="Solve">Change</button><?php
+                 		 ?><button onclick="solve()" value="<?=$id ?>" name="Solve">Change</button><?php
                  	   }
                     }
                   ?></td>
                 </tr>
                 <?php
-               }
+            }
             ?>
         </tbody>
     </table>
+</div>
     </form>
 </body>
 </html>
-
-
+<script type="text/javascript">
+    function unsolve(){
 <?php
    if(isset($_POST['Usolve']))
    {
    	 $_SESSION['id']=$_POST['Usolve'];
-   	 header('Location:Reply.php');
-   }
-   else if(isset($_POST['Solve']))
+   }?>
+}
+function solve(){
+    <?php
+   if(isset($_POST['Solve']))
    {
    	 $_SESSION['id']=$_POST['Solve'];
-   	 header('Location:Reply.php');
-   }
-?>
+   }?>
+}
+</script>

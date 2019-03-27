@@ -70,4 +70,9 @@
   	 	}
   	 }
   }
+  else if(isset($_POST['logout']))
+  {
+    session_destroy();
+    header('Location:joinAs.php');
+  }
 ?>

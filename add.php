@@ -7,24 +7,25 @@
 	<link rel="stylesheet" type="text/css" href="Addstyle.css">
 </head>
 <body style="background-color:white">
- <form method="POST" action="Add.php">
+ 
 	<div>
 
 
 		<div style=" width: all;background-color: black; height: 150px; border-radius: 10px ;background-image: linear-gradient(to right,black)">
 
-	      <button class="logout" name="logout">LogOut</button>
+			<form method="POST" action="Addserver.php">
+		      <button class="logout" name="logout">LogOut</button>
+		    </form>
 
-			<img align="middle" style=" box-shadow: 4px 2px 2px lightgrey; border-radius: 50%; margin-left:0%; width: 150px;height: 150px" src="RTI.png">
-			<font  style=" font-size:4.5em; font-family: garamond; color:white">RTI</font>
-			
-
-
+				<img align="middle" style=" box-shadow: 4px 2px 2px lightgrey; border-radius: 50%; margin-left:0%; width: 150px;height: 150px" src="RTI.png">
+				<font  style=" font-size:4.5em; font-family: garamond; color:white">RTI</font>
+				
   		</div>
 
+	
+	<form method="POST" action="Add.php">
 
-
-	 <table align="center" class="table" width="45%" height="400px">
+	 <table align="center" class="table" width="45%" height="60%">
 			<tr>
 				<th></th><th></th>
 			</tr>
