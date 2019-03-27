@@ -1,13 +1,16 @@
 body{
 	padding: 0px;
 	margin: 0px;
-	background-color: #AFD5FF;
+	background-color: lightgrey;
 }
 
 header{
 	background: #C2CEDC;
-	height: 50px;
+	height: 80px;
 	border-bottom: 1px solid black; 
+	width: all;
+	background-color: black;
+	box-shadow: 2px 3px 2px grey;
 }
 
 .left-nav{
@@ -15,15 +18,17 @@ header{
 }
 
 .right-nav{
-	float: right;
+	float: right ;
 }
 
 .navbtn{
+	color:white;
 	width: 120px;
 	border: none;
-	border-left: 1px solid black;
-	height: 50px;
-	background: #C2CEDC;
+	border-left: 1px solid lightgrey;
+	height: 80px;
+	box-shadow: 3px 2px 1px grey;
+	background: black;
 }
 
 .navbtn:hover{
@@ -34,7 +39,8 @@ header{
 .middle{
 	margin-top: 5%;
 	margin-left: 30%;
-	border: 1px solid #0078FF;
+	border:1px solid grey;
+	box-shadow: 1px 2px 1px grey;
 	background: white;
 	padding: 10px;
 	width: 500px;
@@ -56,8 +62,9 @@ header{
 }
 
 .btn{
-	background: #0078FF;
-	border: none;
+	background: #5FB2B8;
+	border-radius: 3px;
+	border: 3px #326A6E;
     padding: 5px;
     width: 100px;
     height: 40px;

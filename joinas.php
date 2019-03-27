@@ -7,15 +7,16 @@
 <body>
 	<form method="POST" action="joinas.php">
 	<header>
-		<div class="left-nav"><font size="6">RTI</font></div>
+		<img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
+		<font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
 		<div class="right-nav"><button class="navbtn">About</button><button class="navbtn">FAQ</button><button class="navbtn">Contact</button></div>	  
     </header>
 
-  <div class="middle">	
+  <div class="middle">
     <table>
       <tbody>
       	<tr>
-      		<td width="120px;"></td><td><font size="6" style="font-family: Arial;">Login</font></td>
+      		<td width="120px;"></td><td><font size="6" style="font-family: garamond;">Login</font></td>
       	</tr>
       	<tr>
       		<td colspan="2">
