@@ -69,6 +69,7 @@
           }
           else
           {
+              $_SESSION['Q'] = $Query; 
             	$_SESSION['dep']=$Department;
             	$_SESSION['qu']=$Query;
 	            header('Location:similar.php');

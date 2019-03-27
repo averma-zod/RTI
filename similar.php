@@ -6,49 +6,38 @@
 <html>
 <head>
 	<title>Similar</title>
-	<style type="text/css">
-		 table,th,tr,td{
-            border:1px solid #483D8B;
-            border-collapse: collapse;
-            padding:5px 100px 1px 10px;
-        }
-		.head{
-			margin-top: 12px;
-		}
-		.btn{
-			margin-top: 12px;
-		}
-		.btnn
-        {
-            background: #778899;
-            border-radius: 4px;
-            box-shadow: 2px 5px 2px #2F4F4F;
-            color: white;
-            padding: 10px 24px;
-            margin: 10px 0 0 0;
-            outline: 0;
-            border: 0;
-            transition: all .1s linear;
-        }
-        .btnn:active 
-        {
-            box-shadow: 0 2px 0 #2F4F4F;
-            transform: translateY(3px);
-        }
-	</style>
+	<link rel="stylesheet" type="text/css" href="SimilarStyle.css">
 </head>
 <body style="background-color: #E6E6FA">
  <form method="POST" action="similar.php">
-	    <div align="center">
+ 	    <header>
+		  <img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
+		  <font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
+		  <div class="right-nav"><button class="navbtn">About</button><button class="navbtn">FAQ</button><button class="navbtn">Contact</button></div>	  
+        </header>
+
+        <div class="navigation">
+    	<select class="navibtn" name="Filter">
+    	  <option hidden="">Queries</option>
+    	  <option value="Medical">Medical</option>
+    	  <option value="Education">Education</option>
+    	  <option value="Traffic">Traffic</option>
+    	</select><br>
+    	<button class="navibtn">Account Settings</button><br>
+    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	<button class="logbtn" name="Logout">Logout</button>
+       </div>
+
+       <div class="data" align="center">
 	    	<font style="font-size: 1.4em;font-family: garamond;font-weight: bold;">Your Query:</font>
-	    		<font style="font-size: 1.4em;font-family: garamond;font-weight: bold;color:slateblue"><?php echo $_SESSION['qu'];?></font><br>
-	    <font style="font-size: 1.5em; font-family: garamond">The Similar Queries are:</font>
-	    </div>
+	    	<font style="font-size: 1.4em;font-family: garamond;font-weight: bold;color:slateblue"><?php echo $_SESSION['qu'];?></font><br>
+	        <font style="font-size: 1.5em; font-family: garamond">The Similar Queries are:</font>
+	    
 	    <?php  
 	    $query = "SELECT * FROM Query";
         $sql = mysqli_query($db,$query);
         ?>
-        <table align="center" style="margin-top: 20px">
+        <table align="center" style="margin-top: 40px">
         <thead>
             <th>Query</th>
             <th>Department</th>
@@ -103,7 +92,7 @@
 	            <td><?php 
 	                if($status == 'Solved')
 	                {
-	                	?><button name="Add" value="<?=$id?>">Show Answer</button><?php
+	                	?><button class="show" name="Add" value="<?=$id?>">Show Answer</button><?php
 	                }
 	                else
 	                {
@@ -115,6 +104,7 @@
 	        }
 	    }
         ?>
+    </div>
     </tbody>
 </table>
         <div class="btn" align="center">

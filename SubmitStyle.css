@@ -5,8 +5,11 @@ body{
 
 header{
 	background: #C2CEDC;
-	height: 50px;
+	height: 80px;
 	border-bottom: 1px solid black; 
+	width: all;
+	background-color: black;
+	box-shadow: 2px 3px 2px grey;
 }
 
 .left-nav{
@@ -14,15 +17,17 @@ header{
 }
 
 .right-nav{
-	float: right;
+	float: right ;
 }
 
 .navbtn{
+	color:white;
 	width: 120px;
 	border: none;
-	border-left: 1px solid black;
-	height: 50px;
-	background: #C2CEDC;
+	border-left: 1px solid lightgrey;
+	height: 80px;
+	box-shadow: 3px 2px 1px grey;
+	background: black;
 }
 
 .navbtn:hover{
@@ -46,23 +51,23 @@ header{
 .navigation{
 	float: left;
 	border-right: 1px solid black;
-	height: 605px;
+	height: 649px;
 	width: 160px;
 	background: #172A3F;
 }
 
 .data{
+  margin-top: 100px;
   float: left;
   width: 86%;
   height: 500px;
-  border: 1px solid black;
 }
 
 .logbtn{
 	width: 160px;
 	border: none;
 	border-bottom: 1px solid black;
-	height: 42px;
+	height: 46px;
 	background: #C2CEDC;
 }
 

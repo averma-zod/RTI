@@ -35,11 +35,6 @@ header{
 	transition: 0.3s;
 }
 
-.navbtn:hover{
-	background: #0078FF;
-	transition: 0.3s;
-}
-
 .navibtn{
 	width: 160px;
 	border: none;
