@@ -1,7 +1,7 @@
 <?php
    session_start();
-   $id = $_SESSION['id'];
-
+   $id = $_SESSION['ii'];
+   echo $id;
    $db = mysqli_connect('localhost','root','','rti');
 
    $query = "SELECT * FROM Query where id = '$id'";
