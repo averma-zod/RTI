@@ -2,29 +2,46 @@
 <html>
 <head>
 	<title>RTI</title>
+	<link rel="stylesheet" type="text/css" href="joinasstyle.css">
 </head>
 <body>
 	<form method="POST" action="joinas.php">
-		<select name="joinAs">
-			<option value="As Admin">ADMIN</option>
-			<option value="As Genral user">USER</option>
-		</select>
+	<header>
+		<div class="left-nav"><font size="6">RTI</font></div>
+		<div class="right-nav"><button class="navbtn">About</button><button class="navbtn">FAQ</button><button class="navbtn">Contact</button></div>	  
+    </header>
+
+  <div class="middle">	
     <table>
       <tbody>
+      	<tr>
+      		<td width="120px;"></td><td><font size="6" style="font-family: Arial;">Login</font></td>
+      	</tr>
+      	<tr>
+      		<td colspan="2">
+      			<select class="select" name="joinAs">
+			      <option value="As Admin">ADMIN</option>
+		    	  <option value="As Genral user">USER</option>
+	            </select>
+	        </td>
+      	</tr>
         <tr>
-          <td>Username</td><td><input type="text" name="Name" placeholder="Enter Username"></td>
+          <td width="200px;"><font style="font-family: Courier;" size="5px;">Username</font></td><td><input class="inputfield" type="text" name="Name" placeholder="Enter Username"></td>
         </tr>
         <tr>
-          <td>Password</td><td><input type="Password" name="Password" placeholder="Enter Password"></td>
+          <td><font style="font-family: Courier;" size="5px;">Password</font></td><td><input class="inputfield" type="Password" name="Password" placeholder="Enter Password"></td>
         </tr>
          <tr>
-          <td colspan="2"><input type="Submit" name="Submit" Value="Login"></td>
+          <td></td><td><input class="btn" type="Submit" name="Submit" Value="Login"></td>
         </tr>
       </tbody>
     </table>
-  </form>
+   </div>
+ </form>
 </body>
 </html>
+
+
 <?php
 	$db = mysqli_connect('localhost','root','','RTI');
   	session_start();
@@ -49,12 +66,20 @@
 	  			  }
 	      		  else
 			      {
-			         echo "Incorrect Admin Password";
+			        ?>
+			  	      <script>
+                        window.alert("Incorrect Password");
+                      </script>
+                    <?php
 			      }
 			    }
 			    else
 			    {
-			  	  echo "User Does not Exist";
+			      ?>
+			  	    <script>
+                      window.alert("Admin Does Not Exists");
+                    </script>
+                  <?php
 			    }
 	  		}
 	  	}
@@ -76,12 +101,20 @@
 	  			  }
 	      		  else
 			      {
-			         echo "Incorrect Admin Password";
+			         ?>
+			  	      <script>
+                        window.alert("Incorrect Password");
+                      </script>
+                    <?php
 			      }
 			    }
 			    else
 			    {
-			  	  echo "User Does not Exist";
+			    	?>
+			  	    <script>
+                      window.alert("User Does Not Exists");
+                    </script>
+                    <?php
 			    }
 	  		}
 	  	}

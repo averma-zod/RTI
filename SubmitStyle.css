@@ -55,13 +55,14 @@ header{
   float: left;
   width: 86%;
   height: 500px;
+  border: 1px solid black;
 }
 
 .logbtn{
 	width: 160px;
 	border: none;
 	border-bottom: 1px solid black;
-	height: 56px;
+	height: 42px;
 	background: #C2CEDC;
 }
 
@@ -70,19 +71,6 @@ header{
 	transition: 0.3s;
 }
 
-.select{
-	padding: 5px;
-	width: 99.5%;
-	height: 40px;
-	margin-left: 10px;
-}
-
-.text{
-	margin-left: 10px;
-	width: 99%;
-	height: 150px;
-	background-color: #DCDCDC;
-}
 
 .button{
 	width: 100px;

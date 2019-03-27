@@ -3,6 +3,16 @@
   $Name = $_SESSION['Username'];
   $db = mysqli_connect('localhost','root','','rti');
 
+  if(isset($_POST['Logout']))
+  {
+    session_destroy();
+    header('Location:joinas.php');
+  }
+
+
+
+
+
   if(isset($_POST['Submit']))
   {
   	 $Query = $_POST['text'];
@@ -56,7 +66,7 @@
 	        $query = "CREATE OR REPLACE VIEW view AS SELECT Query,Department,Percentage,Statusz FROM Query WHERE Department='$Department'";
 	            $q = mysqli_query($db,$query);
 				
-
+              $_SESSION['Query'] = $Query; 
 	            $_SESSION['Dept'] = $Department;
               $_SESSION['lastpage'] = 'Add';
               header('Location:Submit.php');  
@@ -69,10 +79,5 @@
           }
   	 	}
   	 }
-  }
-  else if(isset($_POST['logout']))
-  {
-    session_destroy();
-    header('Location:joinAs.php');
   }
 ?>
