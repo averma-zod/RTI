@@ -5,11 +5,8 @@ body{
 
 header{
 	background: #C2CEDC;
-	height: 80px;
+	height: 50px;
 	border-bottom: 1px solid black; 
-	width: all;
-	background-color: black;
-	box-shadow: 2px 3px 2px grey;
 }
 
 .left-nav{
@@ -17,22 +14,15 @@ header{
 }
 
 .right-nav{
-	float: right ;
+	float: right;
 }
 
 .navbtn{
-	color:white;
 	width: 120px;
 	border: none;
-	border-left: 1px solid lightgrey;
-	height: 80px;
-	box-shadow: 3px 2px 1px grey;
-	background: black;
-}
-
-.navbtn:hover{
-	background: #0078FF;
-	transition: 0.3s;
+	border-left: 1px solid black;
+	height: 50px;
+	background: #C2CEDC;
 }
 
 .navbtn:hover{
@@ -56,7 +46,7 @@ header{
 .navigation{
 	float: left;
 	border-right: 1px solid black;
-	height: 649px;
+	height: 605px;
 	width: 160px;
 	background: #172A3F;
 }
@@ -71,32 +61,11 @@ header{
 	width: 160px;
 	border: none;
 	border-bottom: 1px solid black;
-	height: 58px;
+	height: 56px;
 	background: #C2CEDC;
 }
 
 .logbtn:hover{
 	background: red;
 	transition: 0.3s;
-}
-
-.select{
-	padding: 5px;
-	width: 99.5%;
-	height: 40px;
-	margin-left: 10px;
-}
-
-.text{
-	margin-left: 10px;
-	width: 99%;
-	height: 150px;
-	background-color: #DCDCDC;
-}
-
-.button{
-	width: 100px;
-	height: 40px;
-	border: none;
-	background: #0078FF;
 }

@@ -8,8 +8,11 @@
 <body>
 	<form method="POST" action="Add.php">
 	<header>
-		<div class="left-nav"><font size="6">RTI</font></div><div class="right-nav"><button class="navbtn">About</button><button class="navbtn">FAQ</button><button class="navbtn">Contact</button></div>		  
+		<img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
+		<font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
+		<div class="right-nav"><button class="navbtn">About</button><button class="navbtn">FAQ</button><button class="navbtn">Contact</button></div>	  
     </header>
+
     <div class="navigation">
     	<select class="navibtn" name="Filter">
     	  <option hidden="">Queries</option>
@@ -18,7 +21,7 @@
     	  <option value="Traffic">Traffic</option>
     	</select><br>
     	<button class="navibtn">Account Settings</button><br>
-    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     	<button class="logbtn" name="Logout">Logout</button>
     </div>
     <div class="data">
@@ -46,7 +49,7 @@
 	     <br><br><br>
 
 	     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button class="button" name="Submit">Submit</button>
+	     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button class="button" name="Submit">Submit</button>
     </form>
     </div>
 </body>

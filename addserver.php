@@ -9,10 +9,6 @@
     header('Location:joinas.php');
   }
 
-
-
-
-
   if(isset($_POST['Submit']))
   {
   	 $Query = $_POST['text'];
