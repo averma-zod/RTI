@@ -74,3 +74,65 @@ header{
 tr{
 	height: 70px;
 }
+
+
+navbtn{
+	width: 120px;
+	border: none;
+	border-left: 1px solid black;
+	height: 50px;
+	background: #C2CEDC;
+}
+
+.navbtn:hover{
+	background: #0078FF;
+	transition: 0.3s;
+}
+
+.navibtn{
+	width: 160px;
+	border: none;
+	border-bottom: 1px solid black;
+	height: 50px;
+	background: #C2CEDC;
+}
+
+.navibtn:hover{
+	background: #0078FF;
+	transition: 0.3s;
+}
+
+
+
+.navigation{
+	float: left;
+	border-right: 1px solid black;
+	height: all;
+	width: 160px;
+	background: #172A3F;
+}
+
+.logbtn{
+	width: 160px;
+	border: none;
+	border-bottom: 1px solid black;
+	height: 56px;
+	background: #C2CEDC;
+}
+
+.logbtn:hover{
+	background: red;
+	transition: 0.3s;
+}
+.reply{
+	background-color: #C6E4E6;
+	border:1px solid #7EBEC2;
+	width:100px;
+	height:40px;
+}
+.change{
+	background-color: #97A7CB;
+	border:1px solid #7284AB  ;
+	width:100px;
+	height:40px;
+}
