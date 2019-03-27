@@ -66,8 +66,9 @@ header{
 	width: 160px;
 	border: none;
 	border-bottom: 1px solid black;
-	height: 58px;
+	height: 50px;
 	background: #C2CEDC;
+	position: fixed;
 }
 
 .logbtn:hover{

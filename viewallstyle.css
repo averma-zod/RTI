@@ -1,15 +1,25 @@
 body{
-	margin: 0px;
 	padding: 0px;
+	margin: 0px;
+	background-color: lightgrey;
 }
 
 header{
 	background: #C2CEDC;
 	height: 80px;
 	border-bottom: 1px solid black; 
-	width: all;
+	width: 100%;
 	background-color: black;
 	box-shadow: 2px 3px 2px grey;
+	position: fixed;
+	z-index: 10;
+}
+
+table,th,tr,td{
+    border:1px solid #483D8B;
+    border-right: none; 
+    border-collapse: collapse;
+    padding:10px;
 }
 
 .left-nav{
@@ -35,6 +45,15 @@ header{
 	transition: 0.3s;
 }
 
+tr{
+	height: 70px;
+}
+
+.navbtn:hover{
+	background: #0078FF;
+	transition: 0.3s;
+}
+
 .navibtn{
 	width: 160px;
 	border: none;
@@ -49,27 +68,21 @@ header{
 }
 
 .navigation{
+	margin-top: 84px;
 	float: left;
 	border-right: 1px solid black;
-	height: 649px;
+	height: all;
 	width: 160px;
 	background: #172A3F;
 	position: fixed;
-}
-
-.data{
-  float: left;
-  width: 86%;
-  height: 500px;
 }
 
 .logbtn{
 	width: 160px;
 	border: none;
 	border-bottom: 1px solid black;
-	height: 58px;
+	height: 70px;
 	background: #C2CEDC;
-	position: fixed;
 }
 
 .logbtn:hover{
@@ -77,42 +90,15 @@ header{
 	transition: 0.3s;
 }
 
-.button{
-	width: 100px;
-	height: 40px;
-	border: 1px solid blue;
-	background: powderblue;
+.reply{
+	background-color: #C6E4E6;
+	border:1px solid #7EBEC2;
+	width:100px;
+	height:40px;
 }
-
-table{
-	margin-top: 20px;
-	margin-left: 260px; 
-	width: 82%;
-	height: 200px;
-}
-
-tr{
-	padding: 20px;
-}
-
-.container{
-	margin-left: 20px;
-	text-align: center;
-}
-
-.new{
-	width: 100%;
-	height: 140px;
-}
-
-.box{
-	border: 1px solid grey;
-	width: 100%;
-	height: 130px;
-	padding: 5px;
-}
-
-.textt{
-	width: 50%;
-	height: 200px;
+.change{
+	background-color: #97A7CB;
+	border:1px solid #7284AB  ;
+	width:100px;
+	height:40px;
 }

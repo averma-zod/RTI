@@ -13,10 +13,11 @@
  	    <header>
 		  <img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
 		  <font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
-		  <div class="right-nav"><button class="navbtn">About</button><button class="navbtn">FAQ</button><button class="navbtn">Contact</button></div>	  
+		  <div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>  
         </header>
 
         <div class="navigation">
+        <button class="navibtn" name="Home">Home</button><br>
     	<select class="navibtn" name="Filter">
     	  <option hidden="">Queries</option>
     	  <option value="Medical">Medical</option>
@@ -24,7 +25,7 @@
     	  <option value="Traffic">Traffic</option>
     	</select><br>
     	<button class="navibtn">Account Settings</button><br>
-    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     	<button class="logbtn" name="Logout">Logout</button>
        </div>
 
@@ -109,8 +110,8 @@
 </table>
         <div class="btn" align="center">
         	<font style="font-family: garamond;font-size: 1.2em">Add Anyway?</font><br>
-         <button name="Yes" class="btnn">YES</button>
-	     <button name="No" class="btnn">NO</button>
+            <button name="Yes" class="btnn">YES</button>
+	        <button name="No" class="btnn">NO</button>
 	    </div>
 	</div>
  </form>
@@ -121,8 +122,6 @@
 <?php
     if(isset($_POST['Add']))
     { 
-    	
-        
         $a = $_POST['Add'];
     	$sql = "SELECT * FROM Query WHERE id='$a'";    
         $result = mysqli_query($db,$sql);
@@ -134,7 +133,6 @@
     	header('Location:Submit.php');
     }
 
-   
     else if(isset($_POST['Yes']))
     {
     	header('Location:anyway.php');
@@ -143,5 +141,36 @@
     else if(isset($_POST['No']))
     {
     	header('Location:Add.php');
+    }
+
+  if($_SESSION['Username'] == '')
+  {
+    header('Location:joinas.php');
+  }
+
+   if(isset($_POST['Home']))
+   {
+    header('Location:add.php');
+   }
+
+   if(isset($_POST['Logout']))
+   {
+     session_destroy();
+     header('Location:joinas.php');
+   }
+
+   if(isset($_POST['about']))
+    {
+        header('Location:About.php'); 
+    }
+
+    if(isset($_POST['faq']))
+    {
+        header('Location:Faq.php'); 
+    }
+
+    if(isset($_POST['contact']))
+    {
+        header('Location:Contact.php'); 
     }
 ?>

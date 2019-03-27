@@ -9,9 +9,9 @@
 	<header>
 		<img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
 		<font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
-		<div class="right-nav"><button class="navbtn">About</button><button class="navbtn">FAQ</button><button class="navbtn">Contact</button></div>	  
+		<div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>	  
     </header>
-
+    
   <div class="middle">
     <table>
       <tbody>
@@ -120,3 +120,21 @@
 	  		}
 	  	}
 	}
+
+
+
+    if(isset($_POST['about']))
+    {
+        header('Location:About.php');	
+    }
+
+    if(isset($_POST['faq']))
+    {
+        header('Location:Faq.php');	
+    }
+
+    if(isset($_POST['contact']))
+    {
+        header('Location:Contact.php');	
+    }
+?>

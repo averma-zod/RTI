@@ -35,6 +35,11 @@ header{
 	transition: 0.3s;
 }
 
+.navbtn:hover{
+	background: #0078FF;
+	transition: 0.3s;
+}
+
 .navibtn{
 	width: 160px;
 	border: none;
@@ -54,22 +59,21 @@ header{
 	height: 649px;
 	width: 160px;
 	background: #172A3F;
-	position: fixed;
 }
 
 .data{
   float: left;
   width: 86%;
   height: 500px;
+  margin-top: 50px;
 }
 
 .logbtn{
 	width: 160px;
 	border: none;
 	border-bottom: 1px solid black;
-	height: 58px;
+	height: 46px;
 	background: #C2CEDC;
-	position: fixed;
 }
 
 .logbtn:hover{
@@ -77,42 +81,37 @@ header{
 	transition: 0.3s;
 }
 
-.button{
-	width: 100px;
-	height: 40px;
-	border: 1px solid blue;
-	background: powderblue;
+table,th,tr,td{
+    border:1px solid #483D8B;
+    border-collapse: collapse;
+    padding:5px 100px 1px 10px;
+}
+
+.btn{
+	margin-top: 12px;
+}
+		
+.btnn
+{
+   width: 80px;
+   padding: 10px;
+   border: 1px solid black;
+   background: #66AFFF;
+}
+
+.btnn:hover
+{
+   transition: 0.3s;
+   background: #3A97FF;
+}
+
+.Show{
+	width: 120px;
+	height: 35px;
+	background-color: #97A7CB;
+	border:1px solid #7284AB;
 }
 
 table{
-	margin-top: 20px;
-	margin-left: 260px; 
-	width: 82%;
-	height: 200px;
-}
-
-tr{
-	padding: 20px;
-}
-
-.container{
-	margin-left: 20px;
-	text-align: center;
-}
-
-.new{
-	width: 100%;
-	height: 140px;
-}
-
-.box{
-	border: 1px solid grey;
-	width: 100%;
-	height: 130px;
-	padding: 5px;
-}
-
-.textt{
-	width: 50%;
-	height: 200px;
+	margin-left: 20px; 
 }

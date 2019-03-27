@@ -9,7 +9,7 @@
     <header>
     <img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
     <font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
-    <div class="right-nav"><button class="navbtn">About</button><button class="navbtn">FAQ</button><button class="navbtn">Contact</button></div>    
+    <div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>    
     </header>
 
     <div class="navigation">
@@ -49,7 +49,7 @@
          ?>Your Query Has Been Submitted We Will Respond To You As Soon As Possible<?php
        }
     ?>
-     <br><br><br><br><a href="Add.php"><button class="button">Another Query</button></a>
+     <br><br><br><br><button name="Aquery" class="button">Another Query</button>
     </div>
 </body>
 </html>
@@ -60,4 +60,34 @@
   {
     header('Location:add.php');
   }
+  if(isset($_POST['Aquery']))
+  {
+    header('Location:add.php');
+  }
+
+  if($_SESSION['Username'] == '')
+  {
+    header('Location:joinas.php');
+  }
+
+   if(isset($_POST['Logout']))
+   {
+     session_destroy();
+     header('Location:joinas.php');
+   }
+
+   if(isset($_POST['about']))
+    {
+        header('Location:About.php'); 
+    }
+
+    if(isset($_POST['faq']))
+    {
+        header('Location:Faq.php'); 
+    }
+
+    if(isset($_POST['contact']))
+    {
+        header('Location:Contact.php'); 
+    }
 ?>
