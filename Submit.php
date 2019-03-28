@@ -55,6 +55,10 @@
 </html>
 
 <?php
+  if($_SESSION['Type'] == 'Admin')
+  {
+    header('Location:viewall.php');
+  }
 
   if(isset($_POST['home']))
   {

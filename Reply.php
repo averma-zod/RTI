@@ -3,9 +3,19 @@
    $id = $_SESSION['ii'];
    $db = mysqli_connect('localhost','root','','rti');
 
+
+  if($_SESSION['Type'] == 'User')
+  {
+    header('Location:add.php');
+  }
    if($_SESSION['Username'] == '')
   {
     header('Location:joinas.php');
+  }
+
+  if($_SESSION['ii'] == '')
+  {
+    header('Location:viewall.php');
   }
 
    $query = "SELECT * FROM Query where id = '$id'";

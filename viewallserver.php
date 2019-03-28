@@ -1,5 +1,11 @@
 <?php
   session_start();
+
+  if($_SESSION['Type'] == 'User')
+  {
+    header('Location:add.php');
+  }
+  
   if($_SESSION['Username'] == '')
   {
     header('Location:joinas.php');

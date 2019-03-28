@@ -3,6 +3,11 @@
   $Name = $_SESSION['Username'];
   $db = mysqli_connect('localhost','root','','rti');
 
+  if($_SESSION['Type'] == 'Admin')
+  {
+    header('Location:viewall.php');
+  }
+
   if($_SESSION['Username'] == '')
   {
     header('Location:joinas.php');

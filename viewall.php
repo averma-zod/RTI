@@ -49,11 +49,11 @@
 
     <table align="left" style=" width:89.3%; margin-left: 160px; margin-top: 40px">
       <thead>
-        <th>Query</th>
-        <th>Department</th>
-        <th>Date</th>
-        <th>Status</th>
-        <th>Answer</th>
+        <th><font style="font-family: Trebuchet Ms;">Query</font></th>
+        <th><font style="font-family: Trebuchet Ms;">Department</font></th>
+        <th><font style="font-family: Trebuchet Ms;">Date</font></th>
+        <th><font style="font-family: Trebuchet Ms;">Status</font></th>
+        <th><font style="font-family: Trebuchet Ms;">Answer</font></th>
         <?php
           if($type == 'Admin')
           {
@@ -76,11 +76,11 @@
               $id = $row['id'];
             ?>
         
-            <td><?php echo $Query; ?></td>
-            <td><?php echo $Department; ?></td>
-            <td><?php echo $Date; ?></td>
-            <td><?php echo $Status;?></td>
-            <td><?php echo $Answer; ?></td>
+            <td><font style="font-family: Trebuchet Ms;"><?php echo $Query; ?></font></td>
+            <td><font style="font-family: Trebuchet Ms;"><?php echo $Department; ?></font></td>
+            <td><font style="font-family: Trebuchet Ms;"><?php echo $Date; ?></font></td>
+            <td><font style="font-family: Trebuchet Ms;"><?php echo $Status;?></font></td>
+            <td><font style="font-family: Trebuchet Ms;"><?php echo $Answer; ?></font></td>
             <td align="center" >
             <?php
               if($type == 'Admin')

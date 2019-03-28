@@ -16,7 +16,7 @@
     <table>
       <tbody>
       	<tr>
-      		<td width="120px;"></td><td><font size="6" style="font-family: garamond;">Login</font></td>
+      		<td width="120px;"></td><td><font size="6" style="font-family: Trebuchet Ms;">Login</font></td>
       	</tr>
       	<tr>
       		<td colspan="2">

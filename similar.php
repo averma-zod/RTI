@@ -76,7 +76,7 @@
 	            		similar_text($xx[$l],$xy[$c],$per);
 	            		if($per>90)
 	            		{
-	            			$high="<span style='font-weight:bold ;background-color:	lightskyblue;'>$xx[$l]</span>";
+	            			$high="<b><font >$xx[$l]</font></b>";
 	            			$q=str_ireplace($xx[$l], $high, $q);
 	            		}
 	            	}
@@ -120,6 +120,11 @@
 
 
 <?php
+  if($_SESSION['Type'] == 'Admin')
+  {
+    header('Location:viewall.php');
+  }
+
     if(isset($_POST['Add']))
     { 
         $a = $_POST['Add'];
