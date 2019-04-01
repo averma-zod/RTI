@@ -4,11 +4,11 @@ body{
 }
 
 header{
-	background: #C2CEDC;
+	background: white;
 	height: 80px;
 	border-bottom: 1px solid black; 
 	width: all;
-	background-color: black;
+	background-color: white;
 	box-shadow: 2px 3px 2px grey;
 }
 
@@ -40,7 +40,8 @@ header{
 	border: none;
 	border-bottom: 1px solid black;
 	height: 50px;
-	background: #C2CEDC;
+	background: black;
+	color: white;
 }
 
 .navibtn:hover{
@@ -53,7 +54,7 @@ header{
 	border-right: 1px solid black;
 	height: 649px;
 	width: 160px;
-	background: #172A3F;
+	background: black;
 }
 
 .data{
@@ -62,14 +63,6 @@ header{
   height: 500px;
 }
 
-.logbtn{
-	width: 160px;
-	border: none;
-	border-bottom: 1px solid black;
-	height: 50px;
-	background: #C2CEDC;
-	position: fixed;
-}
 
 .logbtn:hover{
 	background: red;

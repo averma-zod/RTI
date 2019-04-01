@@ -22,7 +22,7 @@
         <div style="height: 9px;"></div>
         <button style="border:none; color: white; background: black; font-size: 15px;"><b>Add Department</b></button>
         <div style="height: 9px;"></div>
-        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Queries</b></button>
+        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Filter Queries</b></button>
         <div id="query" style="margin-left: 10px; visibility: hidden;">
           <div style="height: 9px;"></div>
           <form method="POST" action="viewallserver.php">

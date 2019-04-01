@@ -99,3 +99,17 @@ tr{
 	font-family: courier;
 	margin-top: 6.7%;
 }
+
+.navigbtn{
+	width: 150px;
+	border: none;
+	border-bottom: 1px solid black;
+	height: 50px;
+	background: black;
+	color: white;
+}
+
+.navigbtn:hover{
+	background: #0078FF;
+	transition: 0.3s;
+}

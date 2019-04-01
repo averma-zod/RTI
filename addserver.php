@@ -25,6 +25,12 @@
   }
 
 
+if(isset($_POST['query']))
+  {
+    $_SESSION['filt'] = $_POST['query'];
+    header('Location:userfilter.php');
+  }
+
   if(isset($_POST['Submit']))
   {
   	 $Query = $_POST['text'];

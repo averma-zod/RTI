@@ -1,8 +1,10 @@
 <?php
-   include('filterserver.php');
+   include('addserver.php');
    $db = mysqli_connect('localhost','root','','rti');
-   $d=$_SESSION['filt'];
-   $type = $_SESSION['Type'];
+   $d= $_SESSION['filt'];
+   $type=$_SESSION['Type'];
+
+
  ?>
 
 <!DOCTYPE html>
@@ -23,72 +25,64 @@
 
   <div class="navigation" id="nav" style="visibility: visible;">
    
-    <div style="margin-left: 10px; margin-top: 20px; height: 100%;">
-        <button name="home" style="border:none; color: white; background: black; font-size: 15px;" onclick="home()"><b>Home</b></button>
+    <div style="margin-left: 10px; margin-top: 20px; height: 100%; text-align: left ;">
+        <form method="POST" action="add.php">
+      <button name="Home" class="navigbtn"style="border:none; color: white; background: black; font-size: 15px;">Home</button><br>
+    </form>
         <div style="height: 9px;"></div>
-        <button style="border:none; color: white; background: black; font-size: 15px;"><b>Add Department</b></button>
+        <button class="navigbtn" style="border:none; color: white; background: black; font-size: 15px;">Add Department</button>
         <div style="height: 9px;"></div>
-        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Filter Queries</b></button>
+        <button class="navigbtn" style="border:none; color: white; background: black; font-size: 15px;" onclick="query()">Filter Queries</button>
         <div id="query" style="margin-left: 10px; visibility: hidden;">
           <div style="height: 9px;"></div>
-          <form method="POST" action="viewallserver.php">
+          <form method="POST" action="addserver.php">
           <button name="query" value="All Queries" style="border:none; color: white; background: black; font-size: 15px;">All Queries</button><div style="height: 7px;"></div>
           <button name="query" value="Education" style="border:none; color: white; background: black; font-size: 15px;">Education</button><div style="height: 7px;"></div>
           <button name="query" value="Medical" style="border:none; color: white; background: black; font-size: 15px;">Medical</button><div style="height: 7px;"></div>
-          <button name="query" value="Traffic" style="border:none; color: white; background: black; font-size: 15px;">Traffic</button><div style="height: 7px;"></div>
+          <button name="query" value="Traffic" style="border:none; color: white; background: black; font-size: 15px;">Traffic</button><div style="height:7px;"></div>
         </form>
-        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="date()">Date</button><div style="height: 7px;"></div>
-        <form method="POST" action="viewallserver.php">
-          <div id="date" style="margin-left: 10px; visibility: hidden;">
-             <button name="query" value="98" style="border:none; color: white; background: black; font-size: 15px;">2019-2018</button><div style="height: 7px;"></div>
-             <button name="query" value="87" style="border:none; color: white; background: black; font-size: 15px;">2018-2017</button><div style="height: 7px;"></div>
-             <button name="query" value="76" style="border:none; color: white; background: black; font-size: 15px;">2017-2016</button><div style="height: 7px;"></div>
-          </div>
-        </form>
+        
         </div>
-        <div style="height: 43%;">
+        <div style="height: 54%;">
           
         </div>
 
-        <form method="POST" action="viewall.php">
+        <form method="POST" action="add.php">
           <button name="Logout" style="position: fixed; border:none; color: white; background: black; font-size: 15px;"><b>Logout</b></button>
         </form>
     </div>
   </div>
 
-<form method="POST" action="viewall.php">
+<form method="POST" action="userfilter.php">
   <?php
-     session_start();
+     
      $db = mysqli_connect('localhost','root','','rti');
-     $type = $_SESSION['Type'];
      $name = $_SESSION['Username'];
-     if($type == 'Admin')
-     {
-        
-   $query = "SELECT * FROM Query WHERE Department='$d'";
-        $sql = mysqli_query($db,$query);  
-     }
 
-     else
+     if($d=='All Queries')
      {
         $query = "SELECT * FROM Query WHERE Name='$name'";
-        $sql = mysqli_query($db,$query);
+          $sql = mysqli_query($db,$query);    
+        }
+        else{
+       if($type == 'User')
+       {
+          
+          $query = "SELECT * FROM Query WHERE Department='$d' AND Name='$name'";
+          $sql = mysqli_query($db,$query);  
+       }
      }
+
   ?>
 
-    <table align="left" style=" width:89.3%; margin-left: 160px; margin-top: 40px">
+    <table align="left" style=" width:89.3%; margin-left: 160px; margin-top: 83px">
       <thead>
         <th><font style="font-family: Trebuchet Ms;">Query</font></th>
         <th><font style="font-family: Trebuchet Ms;">Department</font></th>
         <th><font style="font-family: Trebuchet Ms;">Date</font></th>
         <th><font style="font-family: Trebuchet Ms;">Status</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Answer</font></th>
-        <?php
-          if($type == 'Admin')
-          {
-            ?><th>Reply</th><?php
-          }
-        ?>
+        <th width="19%;"><font style="font-family: Trebuchet Ms;">Answer</font></th>
+        
       </thead>
       <tbody>
         <?php
@@ -102,29 +96,13 @@
               $Date = $row['Date'];
               $Status = $row['Status'];
               $Answer = $row['Answer'];
-              $id = $row['id'];
             ?>
         
             <td><font style="font-family: Trebuchet Ms;"><?php echo $Query; ?></font></td>
             <td><font style="font-family: Trebuchet Ms;"><?php echo $Department; ?></font></td>
             <td><font style="font-family: Trebuchet Ms;"><?php echo $Date; ?></font></td>
             <td><font style="font-family: Trebuchet Ms;"><?php echo $Status;?></font></td>
-            <td><font style="font-family: Trebuchet Ms;"><?php echo $Answer; ?></font></td>
-            <td align="center" >
-            <?php
-              if($type == 'Admin')
-              {
-                if($Status == 'Unsolved')
-                {
-                  ?><button value="<?=$id ?>" class="reply" name="Usolve">Reply</button><?php
-                }
-                elseif ($Status == 'Solved') 
-                {
-                  ?><button value="<?=$id ?>" class="change" name="Solve">Change</button><?php
-                }
-              }
-            ?>
-            </td>
+            <td style="text-align: center;"><font style="font-family: Trebuchet Ms;"><?php echo $Answer; ?></font></td>
            </tr>
            <?php
             }
