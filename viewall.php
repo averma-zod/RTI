@@ -20,7 +20,7 @@
     <div style="margin-left: 10px; margin-top: 20px; height: 100%;">
         <button name="home" style="border:none; color: white; background: black; font-size: 15px;" onclick="home()"><b>Home</b></button>
         <div style="height: 9px;"></div>
-        <button style="border:none; color: white; background: black; font-size: 15px;"><b>Add Department</b></button>
+        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="depart()"><b>Add Department</b></button>
         <div style="height: 9px;"></div>
         <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Filter Queries</b></button>
         <div id="query" style="margin-left: 10px; visibility: hidden;">
@@ -161,5 +161,10 @@
         {
             y.style.visibility = "visible";
         }
+  }
+  function depart()
+  {
+  	var a=prompt("Enter new Department");
+  	alert(a);
   }
 </script>
