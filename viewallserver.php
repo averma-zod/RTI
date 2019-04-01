@@ -17,6 +17,10 @@
     header('Location:filter.php');
   }
 
+  if(isset($_POST['accset']))
+  {
+    header('Location:AccSet.php');
+  }
 
   if(isset($_POST['Usolve']))
   {

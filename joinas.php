@@ -7,16 +7,14 @@
 <body>
 	<form method="POST" action="joinas.php">
 	<header>
-		<img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
-		<font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:black">RTI</font>
-		<div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>	  
-    </header>
-    
-  <div class="middle">
+        <font  style="font-size:3.5em; margin-left: 20px; font-family: Courier; color:white;">R<font color="red">|</font>T<font color="red">|</font>I</font>
+    </header>  
+
+    <div class="middle">
     <table>
       <tbody>
       	<tr>
-      		<td width="120px;"></td><td><font size="6" style="font-family: Trebuchet Ms;">Login</font></td>
+      		<td colspan="2"><font size="6" style="margin-left: 57%; font-family: Trebuchet Ms;">Login</font></td>
       	</tr>
       	<tr>
       		<td colspan="2">
@@ -32,12 +30,23 @@
         <tr>
           <td><font style="font-family: Courier;" size="5px;">Password</font></td><td><input class="inputfield" type="Password" name="Password" placeholder="Enter Password"></td>
         </tr>
-         <tr>
-          <td></td><td><input class="btn" type="Submit" name="Submit" Value="Login"></td>
+        <tr style="height: 20px;">
+        	
+        </tr>
+        <tr>
+          <td colspan="2"><input class="btn" type="Submit" name="Submit" Value="Login"></td>
         </tr>
       </tbody>
     </table>
    </div>
+
+ <footer class="footer">
+	<br>
+	<a href="About.php" style="text-decoration: none; color: white; font-family: Courier;">About</a>
+	<a href="Contact.php" style="text-decoration: none; color: red; font-family: Courier;">|  Contact Us  |</a>
+	<a href="faq.php" style="text-decoration: none; color: white; font-family: Courier;">FAQ</a>
+ </footer>
+
  </form>
 </body>
 </html>

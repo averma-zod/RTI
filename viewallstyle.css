@@ -87,3 +87,15 @@ tr{
 	width:100px;
 	height:40px;
 }
+
+.footer
+{
+	background: black;
+	height: 50px;
+	margin-top: -50px;
+	clear: both;
+	color: white;
+	text-align: center;
+	font-family: courier;
+	margin-top: 6.7%;
+}

@@ -10,9 +10,9 @@
 <body style="background-color: white">
 
   <header>
-    <img align="top" style="border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
-    <font  style="font-size:4.5em; margin-left: 10px; font-family: garamond; color:black;">RTI</font>
-    <div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>
+    <img align="top" style="border-radius: 50%; margin-left:10px;margin-top:10px; width: 60px;height: 60px" src="RTI.png">
+    <font  style="font-size:4.5em; margin-left: 10px; font-family: Courier; color:black;">RTI</font>
+    <div class="right-nav"><form method="POST" action="viewallserver.php"><button class="navbtn" name="Logout">Logout</button></form></div>
   </header>
 
   <div class="navigation" id="nav" style="visibility: visible;">
@@ -40,13 +40,14 @@
           </div>
         </form>
         </div>
-        <div style="height: 43%;">
+        <div style="height: 42%;">
           
         </div>
-
-        <form method="POST" action="viewall.php">
-          <button name="Logout" style="position: fixed; border:none; color: white; background: black; font-size: 15px;"><b>Logout</b></button>
-        </form>
+        <div>
+          <form method="POST" action="viewallserver.php">
+           <button name="accset" style="font-family: Trebuchet Ms; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']?></button><div style="height: 7px;"></div>
+         </form>
+        </div>
     </div>
   </div>
 
@@ -70,15 +71,15 @@
 
     <table align="left" style=" width:89.3%; margin-left: 160px; margin-top: 40px">
       <thead>
-        <th><font style="font-family: Trebuchet Ms;">Query</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Department</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Date</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Status</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Answer</font></th>
+        <th width="30%;"><font style="font-family: Trebuchet Ms;">Query</font></th>
+        <th width="10%;"><font style="font-family: Trebuchet Ms;">Department</font></th>
+        <th width="10%;"><font style="font-family: Trebuchet Ms;">Date</font></th>
+        <th width="10%;"><font style="font-family: Trebuchet Ms;">Status</font></th>
+        <th width="40%;"><font style="font-family: Trebuchet Ms;">Answer</font></th>
         <?php
           if($type == 'Admin')
           {
-            ?><th>Reply</th><?php
+            ?><th width="120px;"><font style="font-family: Trebuchet Ms;">Reply</font></th><?php
           }
         ?>
       </thead>
@@ -97,11 +98,11 @@
               $id = $row['id'];
             ?>
         
-            <td><font style="font-family: Trebuchet Ms;"><?php echo $Query; ?></font></td>
-            <td><font style="font-family: Trebuchet Ms;"><?php echo $Department; ?></font></td>
-            <td><font style="font-family: Trebuchet Ms;"><?php echo $Date; ?></font></td>
-            <td><font style="font-family: Trebuchet Ms;"><?php echo $Status;?></font></td>
-            <td><font style="font-family: Trebuchet Ms;"><?php echo $Answer; ?></font></td>
+            <td style="text-align: center;"><font style="font-family: Trebuchet Ms;"><?php echo $Query; ?></font></td>
+            <td style="text-align: center;"><font style="font-family: Trebuchet Ms;"><?php echo $Department; ?></font></td>
+            <td style="text-align: center;"><font style="font-family: Trebuchet Ms;"><?php echo $Date; ?></font></td>
+            <td style="text-align: center;"><font style="font-family: Trebuchet Ms;"><?php echo $Status;?></font></td>
+            <td style="text-align: center;"><font style="font-family: Trebuchet Ms;"><?php echo $Answer; ?></font></td>
             <td align="center" >
             <?php
               if($type == 'Admin')
@@ -124,6 +125,13 @@
         </tbody>
       </table>
     </form>
+
+  <footer class="footer">
+    <br>
+    <a href="about.php" style="text-decoration: none; color: white; font-family: Courier;">About  |</a>
+    <a href="contact.php" style="text-decoration: none; color: white; font-family: Courier;">Contact Us  |</a>
+    <a href="faq.php" style="text-decoration: none; color: white; font-family: Courier;">FAQ</a>
+ </footer>
 </body>
 </html>
 

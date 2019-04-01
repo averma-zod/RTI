@@ -5,11 +5,10 @@ body{
 }
 
 header{
-	background: #C2CEDC;
-	height: 80px;
+	height: 65px;
 	border-bottom: 1px solid black; 
 	width: all;
-	background-color: white;
+	background-color: black;
 	box-shadow: 2px 3px 2px grey;
 }
 
@@ -36,9 +35,14 @@ header{
 	transition: 0.3s;
 }
 
+.container
+{
+	min-height: 100%;
+}
+
 .middle{
 	margin-top: 5%;
-	margin-left: 30%;
+	margin-left: 32.25%;
 	border:1px solid grey;
 	box-shadow: 1px 2px 1px grey;
 	background: white;
@@ -62,12 +66,12 @@ header{
 }
 
 .btn{
-	background: #5FB2B8;
-	border-radius: 3px;
+	background: lightblue;
 	border: 3px #326A6E;
     padding: 5px;
     width: 100px;
     height: 40px;
+    margin-left: 55%;
 }
 
 
@@ -75,7 +79,15 @@ tr{
 	height: 70px;
 }
 
-.navbtn:hover{
-	background: #0078FF;
-	transition: 0.3s;
+
+.footer
+{
+	background: black;
+	height: 50px;
+	margin-top: -50px;
+	clear: both;
+	color: white;
+	text-align: center;
+	font-family: courier;
+	margin-top: 7.8%;
 }
