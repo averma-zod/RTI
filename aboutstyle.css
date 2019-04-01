@@ -1,0 +1,24 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: lightgrey;
+}
+
+header{
+	background: #C2CEDC;
+	height: 80px;
+	border-bottom: 1px solid black; 
+	width: 100%;
+	background-color: black;
+	box-shadow: 2px 3px 2px grey;
+	position: fixed;
+	z-index: 10;
+}
+
+.container{
+	float: left;
+    position: relative;
+    width:60%;
+    margin-left: 20%; 
+    margin-top: 80px
+}
