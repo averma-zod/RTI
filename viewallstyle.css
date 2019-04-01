@@ -5,11 +5,10 @@ body{
 }
 
 header{
-	background: #C2CEDC;
 	height: 80px;
 	border-bottom: 1px solid black; 
 	width: 100%;
-	background-color: black;
+	background-color: white;
 	box-shadow: 2px 3px 2px grey;
 	position: fixed;
 	z-index: 10;
@@ -28,6 +27,16 @@ table,th,tr,td{
 
 .right-nav{
 	float: right ;
+}
+
+.navbtnn{
+	border: none;
+	border-right: 1px solid black;
+	background: none;
+	float: left;
+	width: 80px;
+	height: 80px;
+	display: block;
 }
 
 .navbtn{
@@ -54,41 +63,17 @@ tr{
 	transition: 0.3s;
 }
 
-.navibtn{
-	width: 160px;
-	border: none;
-	border-bottom: 1px solid black;
-	height: 50px;
-	background: #C2CEDC;
-}
-
-.navibtn:hover{
-	background: #0078FF;
-	transition: 0.3s;
-}
 
 .navigation{
-	margin-top: 84px;
+	margin-top: 80px;
 	float: left;
 	border-right: 1px solid black;
-	height: all;
+	height: 100%;
 	width: 160px;
-	background: #172A3F;
+	background: black;
 	position: fixed;
 }
 
-.logbtn{
-	width: 160px;
-	border: none;
-	border-bottom: 1px solid black;
-	height: 70px;
-	background: #C2CEDC;
-}
-
-.logbtn:hover{
-	background: red;
-	transition: 0.3s;
-}
 
 .reply{
 	background-color: #C6E4E6;

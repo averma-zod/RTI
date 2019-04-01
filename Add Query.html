@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost/RTI/add.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Add Query</title>
+	<link rel="stylesheet" type="text/css" href="./Add Query_files/Addstyle.css">
+</head>
+<body>
+	<form method="POST" action="http://localhost/RTI/Add.php">
+	<header>
+		<img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="./Add Query_files/RTI.png">
+		<font style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
+		<div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div> 	  
+    </header>
+
+    <div class="navigation">
+    	<button name="Home" class="navibtn">Home</button><br>
+    	<select class="navibtn" name="Filter">
+    	  <option hidden="">Queries</option>
+    	  <option value="Medical">Medical</option>
+    	  <option value="Education">Education</option>
+    	  <option value="Traffic">Traffic</option>
+    	</select><br>
+    	<button class="navibtn">Account Settings</button><br>
+    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	<button class="logbtn" name="Logout">Logout</button>
+    </div>
+    <div class="data">
+	    <h3 align="center">
+		  <font style="font-size: 1.4em; font-family: garamond; color:Black">
+			Query Submition
+		  </font>
+	    </h3>
+
+	   &nbsp;Department*
+	   <br><br>
+		 <select class="select" style="background-color: #DCDCDC" name="Department">
+			<option hidden="">Select</option>
+			<option value="Medical">Medical</option>
+			<option value="Traffic">Traffic</option>
+			<option value="Education">Education</option>
+		 </select>
+
+		 <br><br><br><br>
+
+	    &nbsp;Query*
+	    <br><br>
+	     <textarea class="text" name="text" placeholder="Enter Your Query"></textarea>
+
+	     <br><br><br>
+
+	                          
+	                     <button class="button" name="Submit">Submit</button>
+    
+    </div></form>
+
+</body></html>

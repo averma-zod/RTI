@@ -8,7 +8,7 @@
 	<form method="POST" action="joinas.php">
 	<header>
 		<img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
-		<font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
+		<font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:black">RTI</font>
 		<div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>	  
     </header>
     

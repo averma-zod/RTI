@@ -9,27 +9,48 @@
 
 <body style="background-color: white">
 
-  <form method="POST" action="viewall.php">
-
   <header>
     <img align="top" style="border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
-    <font  style="font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
-    <div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>  
+    <font  style="font-size:4.5em; margin-left: 10px; font-family: garamond; color:black;">RTI</font>
+    <div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>
   </header>
 
-  <div class="navigation">
-    <button class="navibtn" name="Home">Home</button><br>
-    <select class="navibtn" name="Filter">
-      <option hidden="">Queries</option>
-      <option value="Medical">Medical</option>
-      <option value="Education">Education</option>
-      <option value="Traffic">Traffic</option>
-    </select><br>
-    <button class="navibtn">Account Settings</button><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <button class="logbtn" name="Logout">Logout</button>
+  <div class="navigation" id="nav" style="visibility: visible;">
+   
+    <div style="margin-left: 10px; margin-top: 20px; height: 100%;">
+        <button name="home" style="border:none; color: white; background: black; font-size: 15px;" onclick="home()"><b>Home</b></button>
+        <div style="height: 9px;"></div>
+        <button style="border:none; color: white; background: black; font-size: 15px;"><b>Add Department</b></button>
+        <div style="height: 9px;"></div>
+        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Queries</b></button>
+        <div id="query" style="margin-left: 10px; visibility: hidden;">
+          <div style="height: 9px;"></div>
+          <form method="POST" action="viewallserver.php">
+          <button name="query" value="All Queries" style="border:none; color: white; background: black; font-size: 15px;">All Queries</button><div style="height: 7px;"></div>
+          <button name="query" value="Education" style="border:none; color: white; background: black; font-size: 15px;">Education</button><div style="height: 7px;"></div>
+          <button name="query" value="Medical" style="border:none; color: white; background: black; font-size: 15px;">Medical</button><div style="height: 7px;"></div>
+          <button name="query" value="Traffic" style="border:none; color: white; background: black; font-size: 15px;">Traffic</button><div style="height: 7px;"></div>
+        </form>
+        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="date()">Date</button><div style="height: 7px;"></div>
+        <form method="POST" action="viewallserver.php">
+          <div id="date" style="margin-left: 10px; visibility: hidden;">
+             <button name="query" value="98" style="border:none; color: white; background: black; font-size: 15px;">2019-2018</button><div style="height: 7px;"></div>
+             <button name="query" value="87" style="border:none; color: white; background: black; font-size: 15px;">2018-2017</button><div style="height: 7px;"></div>
+             <button name="query" value="76" style="border:none; color: white; background: black; font-size: 15px;">2017-2016</button><div style="height: 7px;"></div>
+          </div>
+        </form>
+        </div>
+        <div style="height: 43%;">
+          
+        </div>
+
+        <form method="POST" action="viewall.php">
+          <button name="Logout" style="position: fixed; border:none; color: white; background: black; font-size: 15px;"><b>Logout</b></button>
+        </form>
+    </div>
   </div>
 
+<form method="POST" action="viewall.php">
 	<?php
      session_start();
      $db = mysqli_connect('localhost','root','','rti');
@@ -105,3 +126,32 @@
     </form>
 </body>
 </html>
+
+<script type="text/javascript">
+  function query() 
+  {
+        var y = document.getElementById("query");
+        var x = document.getElementById("date");
+        if (y.style.visibility === "visible") 
+        {
+            y.style.visibility = "hidden";
+            x.style.visibility = "hidden";
+        } 
+        else 
+        {
+            y.style.visibility = "visible";
+        }
+  }
+  function date() 
+  {
+        var y = document.getElementById("date");
+        if (y.style.visibility === "visible") 
+        {
+            y.style.visibility = "hidden";
+        } 
+        else 
+        {
+            y.style.visibility = "visible";
+        }
+  }
+</script>
