@@ -17,9 +17,9 @@
     header('Location:filter.php');
   }
 
-  if(isset($_POST['accset']))
+  if(isset($_POST['AccSet']))
   {
-    header('Location:AccSet.php');
+    header('Location:Acount.php');
   }
 
   if(isset($_POST['Usolve']))

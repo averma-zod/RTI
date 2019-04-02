@@ -1,16 +1,15 @@
-<?php include('Addserver.php'); ?>
 <!DOCTYPE html>
-<html>
-<head>
+<!-- saved from url=(0028)http://localhost/RTI/add.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Add Query</title>
-	<link rel="stylesheet" type="text/css" href="Addstyle.css">
+	<link rel="stylesheet" type="text/css" href="./Add Query_files/Addstyle.css">
 </head>
 <body>
 	
 	<header>
-        <font  style="margin-left: 20px; font-family: Courier; color:white;"><font style="font-size:3.0em">R</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.5em">T</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.0em">I</font></font>
+        <font style="margin-left: 20px; font-family: Courier; color:white;"><font style="font-size:3.0em">R</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.5em">T</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.0em">I</font></font>
         <div class="right-nav">
-           <form method="POST" action="addserver.php">
+           <form method="POST" action="http://localhost/RTI/addserver.php">
             <button class="navbtn" name="Logout">Logout</button>
            </form>
         </div>
@@ -26,7 +25,7 @@
         <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Filter Queries</b></button>
         <div id="query" style="margin-left: 10px; visibility: hidden;">
           <div style="height: 9px;"></div>
-          <form method="POST" action="addserver.php">
+          <form method="POST" action="http://localhost/RTI/addserver.php">
           <button name="query" value="All Queries" style="border:none; color: white; background: black; font-size: 15px;">All Queries</button><div style="height: 7px;"></div>
           <button name="query" value="Education" style="border:none; color: white; background: black; font-size: 15px;">Education</button><div style="height: 7px;"></div>
           <button name="query" value="Medical" style="border:none; color: white; background: black; font-size: 15px;">Medical</button><div style="height: 7px;"></div>
@@ -34,8 +33,8 @@
         </form>
         </div>
         <div>
-          <form method="POST" action="Addserver.php">
-          <button name="AccSet" style="bottom: 10px; position: fixed; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']; ?></button>
+          <form method="POST" action="http://localhost/RTI/Addserver.php">
+          <button name="AccSet" style="bottom: 10px; position: fixed; border:none; color: white; background: black; font-size: 15px;">Shreyansh</button>
          </form>
         </div>
     </div>
@@ -48,7 +47,7 @@
 			Query Submition
 		  </font>
 	    </h3>
-	    <form method="POST" action="Add.php">
+	    <form method="POST" action="http://localhost/RTI/Add.php">
 	   &nbsp;Department*
 	   <br><br>
 		 <select class="select" style="background-color: #DCDCDC" name="Department">
@@ -66,20 +65,20 @@
 
 	     <br><br><br>
 
-	     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button class="button" name="Submit">Submit</button>
+	                          
+	                     <button class="button" name="Submit">Submit</button>
     </form>
     </div>
     </div>
 
     <footer class="footer">
     <br>
-      <a href="About.php" style="text-decoration: none; color: white; font-family: Courier;">About</a>
-      <a href="Contact.php" style="text-decoration: none; color: red; font-family: Courier;">|  Contact Us  |</a>
-      <a href="faq.php" style="text-decoration: none; color: white; font-family: Courier;">FAQ</a>
+      <a href="http://localhost/RTI/About.php" style="text-decoration: none; color: white; font-family: Courier;">About</a>
+      <a href="http://localhost/RTI/Contact.php" style="text-decoration: none; color: red; font-family: Courier;">|  Contact Us  |</a>
+      <a href="http://localhost/RTI/faq.php" style="text-decoration: none; color: white; font-family: Courier;">FAQ</a>
     </footer>
-</body>
-</html>
+
+
 
 <script type="text/javascript">
   function query() 
@@ -96,4 +95,4 @@
             y.style.visibility = "visible";
         }
   }
-  </script>
+  </script></body></html>

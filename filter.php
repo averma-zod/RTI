@@ -27,7 +27,7 @@
   <div class="navigation" id="nav" style="visibility: visible;">
    
     <div style="margin-left: 10px; margin-top: 20px; height: 100%;">
-        <button name="home" style="border:none; color: white; background: black; font-size: 15px;" onclick="home()"><b>Home</b></button>
+        <a href="viewall.php"><button name="home" style="border:none; color: white; background: black; font-size: 15px;" onclick="home()"><b>Home</b></button></a>
         <div style="height: 9px;"></div>
         <button style="border:none; color: white; background: black; font-size: 15px;"><b>Add Department</b></button>
         <div style="height: 9px;"></div>
@@ -75,8 +75,8 @@
         </form>
         </div>
 
-        <form method="POST" action="viewall.php">
-          <button name="Logout" style="bottom: 10px; position: fixed; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']; ?></button>
+        <form method="POST" action="filterserver.php">
+          <button name="AccSet" style="bottom: 10px; position: fixed; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']; ?></button>
         </form>
     </div>
   </div>

@@ -24,6 +24,10 @@
     header('Location:joinas.php');
   }
 
+if(isset($_POST['AccSet']))
+  {
+    header('Location:Acount.php');
+  }
 
 if(isset($_POST['query']))
   {

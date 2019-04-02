@@ -1,5 +1,5 @@
 <?php
-   include('addserver.php');
+   include('userfilterserver.php');
    $db = mysqli_connect('localhost','root','','rti');
    $d= $_SESSION['filt'];
    $type=$_SESSION['Type'];
@@ -11,49 +11,80 @@
 <html>
 <head>
   <title>viewall</title>
-  <link rel="stylesheet" type="text/css" href="viewallstyle.css">
+  <link rel="stylesheet" type="text/css" href="userfilterstyle.css">
 </head>
 
 
 <body style="background-color: white">
 
   <header>
-    <img align="top" style="border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
-    <font  style="font-size:4.5em; margin-left: 10px; font-family: garamond; color:black;">RTI</font>
-    <div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>
-  </header>
+        <font  style="margin-left: 20px; font-family: Courier; color:white;"><font style="font-size:3.0em">R</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.5em">T</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.0em">I</font></font>
+        <div class="right-nav">
+           <form method="POST" action="userfilterserver.php">
+            <button class="navbtn" name="Logout">Logout</button>
+           </form>
+        </div>
+    </header>
 
-  <div class="navigation" id="nav" style="visibility: visible;">
+   <div class="navigation" id="nav" style="visibility: visible;">
    
-    <div style="margin-left: 10px; margin-top: 20px; height: 100%; text-align: left ;">
-        <form method="POST" action="add.php">
-      <button name="Home" class="navigbtn"style="border:none; color: white; background: black; font-size: 15px;">Home</button><br>
-    </form>
+    <div style="margin-left: 10px; margin-top: 20px; height: 100%;">
+        <a href="add.php"><button name="home" style="border:none; color: white; background: black; font-size: 15px;" onclick="home()"><b>Home</b></button></a>
         <div style="height: 9px;"></div>
-        <button class="navigbtn" style="border:none; color: white; background: black; font-size: 15px;">Add Department</button>
+        <button style="border:none; color: white; background: black; font-size: 15px;"><b>Add Department</b></button>
         <div style="height: 9px;"></div>
-        <button class="navigbtn" style="border:none; color: white; background: black; font-size: 15px;" onclick="query()">Filter Queries</button>
-        <div id="query" style="margin-left: 10px; visibility: hidden;">
+        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Filter Queries</b></button>
+        <div id="query" style="margin-left: 10px; visibility: visible;">
           <div style="height: 9px;"></div>
-          <form method="POST" action="addserver.php">
+          <form method="POST" action="userfilterserver.php">
           <button name="query" value="All Queries" style="border:none; color: white; background: black; font-size: 15px;">All Queries</button><div style="height: 7px;"></div>
-          <button name="query" value="Education" style="border:none; color: white; background: black; font-size: 15px;">Education</button><div style="height: 7px;"></div>
-          <button name="query" value="Medical" style="border:none; color: white; background: black; font-size: 15px;">Medical</button><div style="height: 7px;"></div>
-          <button name="query" value="Traffic" style="border:none; color: white; background: black; font-size: 15px;">Traffic</button><div style="height:7px;"></div>
+          <button name="query" value="Education" style="border:none; color: white; background: black; font-size: 15px;">
+            <?php 
+              if($d == 'Education')
+              {
+                ?><font color="red">Education</font><?php
+              }
+              else
+              {
+                ?><font color="white">Education</font><?php
+              }
+              ?>
+            </button><div style="height: 7px;"></div>
+          <button name="query" value="Medical" style="border:none; color: white; background: black; font-size: 15px;">
+            <?php 
+              if($d == 'Medical')
+              {
+                ?><font color="red">Medical</font><?php
+              }
+              else
+              {
+                ?><font color="white">Medical</font><?php
+              }
+              ?>
+          </button><div style="height: 7px;"></div>
+          <button name="query" value="Traffic" style="border:none; color: white; background: black; font-size: 15px;">
+            <?php 
+              if($d == 'Traffic')
+              {
+                ?><font color="red">Traffic</font><?php
+              }
+              else
+              {
+                ?><font color="white">Traffic</font><?php
+              }
+              ?>
+          </button><div style="height: 7px;"></div>
         </form>
-        
-        </div>
-        <div style="height: 54%;">
-          
         </div>
 
-        <form method="POST" action="add.php">
-          <button name="Logout" style="position: fixed; border:none; color: white; background: black; font-size: 15px;"><b>Logout</b></button>
+        <form method="POST" action="userfilterserver.php">
+          <button name="AccSet" style="bottom: 10px; position: fixed; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']; ?></button>
         </form>
     </div>
   </div>
 
-<form method="POST" action="userfilter.php">
+
+<form method="POST" action="userfilterserver.php">
   <?php
      
      $db = mysqli_connect('localhost','root','','rti');

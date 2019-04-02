@@ -37,7 +37,7 @@
         </div>
         <div>
           <form method="POST" action="viewallserver.php">
-          <button name="Logout" style="bottom: 10px; position: fixed; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']; ?></button>
+          <button name="AccSet" style="bottom: 10px; position: fixed; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']; ?></button>
          </form>
         </div>
     </div>
@@ -118,11 +118,11 @@
     </form>
 
   <footer class="footer">
-    <br>
-    <a href="about.php" style="text-decoration: none; color: white; font-family: Courier;">About  |</a>
-    <a href="contact.php" style="text-decoration: none; color: white; font-family: Courier;">Contact Us  |</a>
-    <a href="faq.php" style="text-decoration: none; color: white; font-family: Courier;">FAQ</a>
- </footer>
+  <br>
+      <a href="About.php" style="text-decoration: none; color: white; font-family: Courier;">About</a>
+      <a href="Contact.php" style="text-decoration: none; color: red; font-family: Courier;">|  Contact Us  |</a>
+      <a href="faq.php" style="text-decoration: none; color: white; font-family: Courier;">FAQ</a>
+  </footer>
 </body>
 </html>
 

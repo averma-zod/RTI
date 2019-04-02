@@ -6,6 +6,14 @@ if(isset($_POST['query']))
     $_SESSION['filt'] = $_POST['query'];
     header('Location:filter.php');
   }
+
+  
+  if(isset($_POST['AccSet']))
+  {
+    header('Location:Acount.php');
+  }
+
+
     if(isset($_POST['Usolve']))
   {
   	session_start();
