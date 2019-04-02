@@ -44,7 +44,7 @@
   <div class="container">
     <div class="data">
 	    <h3 align="center">
-		  <font style="font-size: 1.4em; font-family: garamond; color:Black">
+		  <font style="font-size: 1.4em; font-family: Trebuchet Ms; color:Black">
 			Query Submition
 		  </font>
 	    </h3>

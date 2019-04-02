@@ -106,13 +106,13 @@
 
   ?>
 
-    <table align="left" style=" width:89.3%; margin-left: 160px; margin-top: 83px">
-      <thead>
-        <th><font style="font-family: Trebuchet Ms;">Query</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Department</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Date</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Status</font></th>
-        <th width="19%;"><font style="font-family: Trebuchet Ms;">Answer</font></th>
+    <table align="left" style="text-align: center; width:89.3%; margin-left: 160px; margin-top: 65px;">
+      <thead style=" background:#343434; color: white;">
+        <th width="25%;"><font style="font-family: Trebuchet Ms;">Query</font></th>
+        <th width="15%;"><font style="font-family: Trebuchet Ms;">Department</font></th>
+        <th width="15%;"><font style="font-family: Trebuchet Ms;">Date</font></th>
+        <th width="15%;"><font style="font-family: Trebuchet Ms;">Status</font></th>
+        <th width="40%;"><font style="font-family: Trebuchet Ms;">Answer</font></th>
         
       </thead>
       <tbody>
