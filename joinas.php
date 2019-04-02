@@ -4,17 +4,17 @@
 	<title>RTI</title>
 	<link rel="stylesheet" type="text/css" href="joinasstyle.css">
 </head>
-<body>
+<body background="back.jpg">
 	<form method="POST" action="joinas.php">
 	<header>
-        <font  style="font-size:3.5em; margin-left: 20px; font-family: Courier; color:white;">R<font color="red">|</font>T<font color="red">|</font>I</font>
+        <font  style="margin-left: 20px; font-family: Courier; color:white;"><font style="font-size:3.0em">R</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.5em">T</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.0em">I</font></font>
     </header>  
 
     <div class="middle">
     <table>
       <tbody>
       	<tr>
-      		<td colspan="2"><font size="6" style="margin-left: 57%; font-family: Trebuchet Ms;">Login</font></td>
+      		<td colspan="2"><font size="6" style="margin-left: 64%; font-family: Trebuchet Ms;">Login</font></td>
       	</tr>
       	<tr>
       		<td colspan="2">
@@ -25,7 +25,7 @@
 	        </td>
       	</tr>
         <tr>
-          <td width="200px;"><font style="font-family: Courier;" size="5px;">Username</font></td><td><input class="inputfield" type="text" name="Name" placeholder="Enter Username"></td>
+          <td width="160px;"><font style="font-family: Courier;" size="5px;">Username</font></td><td><input class="inputfield" type="text" name="Name" placeholder="Enter Username"></td>
         </tr>
         <tr>
           <td><font style="font-family: Courier;" size="5px;">Password</font></td><td><input class="inputfield" type="Password" name="Password" placeholder="Enter Password"></td>

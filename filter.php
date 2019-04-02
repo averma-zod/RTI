@@ -9,17 +9,20 @@
 <html>
 <head>
   <title>viewall</title>
-  <link rel="stylesheet" type="text/css" href="viewallstyle.css">
+  <link rel="stylesheet" type="text/css" href="filterstyle.css">
 </head>
 
 
 <body style="background-color: white">
 
   <header>
-    <img align="top" style="border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
-    <font  style="font-size:4.5em; margin-left: 10px; font-family: garamond; color:black;">RTI</font>
-    <div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>
-  </header>
+        <font  style="margin-left: 20px; font-family: Courier; color:white;"><font style="font-size:3.0em">R</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.5em">T</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.0em">I</font></font>
+        <div class="right-nav">
+           <form method="POST" action="viewallserver.php">
+            <button class="navbtn" name="Logout">Logout</button>
+           </form>
+        </div>
+    </header> 
 
   <div class="navigation" id="nav" style="visibility: visible;">
    
@@ -29,29 +32,51 @@
         <button style="border:none; color: white; background: black; font-size: 15px;"><b>Add Department</b></button>
         <div style="height: 9px;"></div>
         <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Filter Queries</b></button>
-        <div id="query" style="margin-left: 10px; visibility: hidden;">
+        <div id="query" style="margin-left: 10px; visibility: visible;">
           <div style="height: 9px;"></div>
           <form method="POST" action="viewallserver.php">
           <button name="query" value="All Queries" style="border:none; color: white; background: black; font-size: 15px;">All Queries</button><div style="height: 7px;"></div>
-          <button name="query" value="Education" style="border:none; color: white; background: black; font-size: 15px;">Education</button><div style="height: 7px;"></div>
-          <button name="query" value="Medical" style="border:none; color: white; background: black; font-size: 15px;">Medical</button><div style="height: 7px;"></div>
-          <button name="query" value="Traffic" style="border:none; color: white; background: black; font-size: 15px;">Traffic</button><div style="height: 7px;"></div>
+          <button name="query" value="Education" style="border:none; color: white; background: black; font-size: 15px;">
+            <?php 
+              if($d == 'Education')
+              {
+                ?><font color="red">Education</font><?php
+              }
+              else
+              {
+                ?><font color="white">Education</font><?php
+              }
+              ?>
+            </button><div style="height: 7px;"></div>
+          <button name="query" value="Medical" style="border:none; color: white; background: black; font-size: 15px;">
+            <?php 
+              if($d == 'Medical')
+              {
+                ?><font color="red">Medical</font><?php
+              }
+              else
+              {
+                ?><font color="white">Medical</font><?php
+              }
+              ?>
+          </button><div style="height: 7px;"></div>
+          <button name="query" value="Traffic" style="border:none; color: white; background: black; font-size: 15px;">
+            <?php 
+              if($d == 'Traffic')
+              {
+                ?><font color="red">Traffic</font><?php
+              }
+              else
+              {
+                ?><font color="white">Traffic</font><?php
+              }
+              ?>
+          </button><div style="height: 7px;"></div>
         </form>
-        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="date()">Date</button><div style="height: 7px;"></div>
-        <form method="POST" action="viewallserver.php">
-          <div id="date" style="margin-left: 10px; visibility: hidden;">
-             <button name="query" value="98" style="border:none; color: white; background: black; font-size: 15px;">2019-2018</button><div style="height: 7px;"></div>
-             <button name="query" value="87" style="border:none; color: white; background: black; font-size: 15px;">2018-2017</button><div style="height: 7px;"></div>
-             <button name="query" value="76" style="border:none; color: white; background: black; font-size: 15px;">2017-2016</button><div style="height: 7px;"></div>
-          </div>
-        </form>
-        </div>
-        <div style="height: 43%;">
-          
         </div>
 
         <form method="POST" action="viewall.php">
-          <button name="Logout" style="position: fixed; border:none; color: white; background: black; font-size: 15px;"><b>Logout</b></button>
+          <button name="Logout" style="bottom: 10px; position: fixed; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']; ?></button>
         </form>
     </div>
   </div>
@@ -76,17 +101,17 @@
      }
   ?>
 
-    <table align="left" style=" width:89.3%; margin-left: 160px; margin-top: 40px">
-      <thead>
-        <th><font style="font-family: Trebuchet Ms;">Query</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Department</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Date</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Status</font></th>
-        <th><font style="font-family: Trebuchet Ms;">Answer</font></th>
+    <table align="left" style=" width:89.3%; margin-left: 160px; margin-top: 30px">
+      <thead style="background: #343434; color: white;">
+        <th width="30%;"><font style="font-family: Trebuchet Ms;">Query</font></th>
+        <th width="10%;"><font style="font-family: Trebuchet Ms;">Department</font></th>
+        <th width="10%;"><font style="font-family: Trebuchet Ms;">Date</font></th>
+        <th width="10%;"><font style="font-family: Trebuchet Ms;">Status</font></th>
+        <th width="40%;"><font style="font-family: Trebuchet Ms;">Answer</font></th>
         <?php
           if($type == 'Admin')
           {
-            ?><th>Reply</th><?php
+            ?><th style="font-family: Trebuchet Ms; width: 120px;">Reply</th><?php
           }
         ?>
       </thead>

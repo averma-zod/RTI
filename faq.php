@@ -6,7 +6,7 @@
 </head>
 <body>
 	<header>
-		<font  style="font-size:3.5em; margin-left: 20px; font-family: Courier; color:white;">R<font color="red">|</font>T<font color="red">|</font>I</font>
+		<font  style="margin-left: 20px; font-family: Courier; color:white;"><font style="font-size:3.0em">R</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.5em">T</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.0em">I</font></font>
         <div class="right-nav"><a href="joinas.php"><a href="joinas.php"><button class="navbtn" name="Login">Login</button></a></div>
     </header> 
 

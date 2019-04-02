@@ -42,26 +42,48 @@
     </style>
 </head>
 <body>
-  <form method="POST" action="Reply.php">
+  
   <header>
-    <img align="top" style=" border-radius: 50%; margin-left:5px;margin-top:5px; width: 70px;height: 70px" src="RTI.png">
-    <font  style=" font-size:4.5em; margin-left: 10px; font-family: garamond; color:white">RTI</font>
-    <div class="right-nav"><button class="navbtn" name="about">About</button><button class="navbtn" name="faq">FAQ</button><button class="navbtn" name="contact">Contact</button></div>    
-  </header>
+        <font  style="margin-left: 20px; font-family: Courier; color:white;"><font style="font-size:3.0em">R</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.5em">T</font><font style="font-size:3.5em" color="red">|</font><font style="font-size:3.0em">I</font></font>
+        <div class="right-nav">
+           <form method="POST" action="viewallserver.php">
+            <button class="navbtn" name="Logout">Logout</button>
+           </form>
+        </div>
+    </header> 
 
-
-  <div class="navigation">
-    <button class="navibtn" name="Home">Home</button><br>
-    <select class="navibtn" name="Filter">
-      <option hidden="">Queries</option>
-      <option value="Medical">Medical</option>
-      <option value="Education">Education</option>
-      <option value="Traffic">Traffic</option>
-    </select><br>
-    <button class="navibtn">Account Settings</button><br>
-    <div style="height: 68%;"></div>
-    <button class="logbtn" name="Logout">Logout</button>
+<div class="navigation" id="nav" style="visibility: visible;">
+   
+    <div style="margin-left: 10px; margin-top: 20px; height: 100%;">
+        <a href="viewall.php"><button name="home" style="border:none; color: white; background: black; font-size: 15px;"><b>Home</b></button></a>
+        <div style="height: 9px;"></div>
+        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="depart()"><b>Add Department</b></button>
+        <div style="height: 9px;"></div>
+        <button style="border:none; color: white; background: black; font-size: 15px;" onclick="query()"><b>Filter Queries</b></button>
+        <div id="query" style="margin-left: 10px; visibility: hidden;">
+          <div style="height: 9px;"></div>
+          <form method="POST" action="viewallserver.php">
+          <button name="query" value="All Queries" style="border:none; color: white; background: black; font-size: 15px;">All Queries</button><div style="height: 7px;"></div>
+          <button name="query" value="Education" style="border:none; color: white; background: black; font-size: 15px;">Education</button><div style="height: 7px;"></div>
+          <button name="query" value="Medical" style="border:none; color: white; background: black; font-size: 15px;">Medical</button><div style="height: 7px;"></div>
+          <button name="query" value="Traffic" style="border:none; color: white; background: black; font-size: 15px;">Traffic</button><div style="height: 7px;"></div>
+        </form>
+        </div>
+        <div style="height: 58%;">
+          
+        </div>
+        <div>
+          <form method="POST" action="viewallserver.php">
+           <button name="accset"  style="font-family: Trebuchet Ms; border:none; color: white; background: black; font-size: 15px;"><?php echo $_SESSION['Username']?></button><div style="height: 7px;"></div>
+         </form>
+        </div>
+    </div>
   </div>
+
+
+
+ <form method="POST" action="Reply.php">
+  
 
   <div class="container">
     <table>
@@ -170,3 +192,38 @@
         header('Location:Contact.php'); 
     }
 ?>
+
+
+<script type="text/javascript">
+  function query() 
+  {
+        var y = document.getElementById("query");
+        var x = document.getElementById("date");
+        if (y.style.visibility === "visible") 
+        {
+            y.style.visibility = "hidden";
+            x.style.visibility = "hidden";
+        } 
+        else 
+        {
+            y.style.visibility = "visible";
+        }
+  }
+  function date() 
+  {
+        var y = document.getElementById("date");
+        if (y.style.visibility === "visible") 
+        {
+            y.style.visibility = "hidden";
+        } 
+        else 
+        {
+            y.style.visibility = "visible";
+        }
+  }
+  function depart()
+  {
+    var a=prompt("Enter new Department");
+    alert(a);
+  }
+</script>
