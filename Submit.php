@@ -42,7 +42,12 @@
        }
        if($lp == 'Add' )
        {
-         ?>Your Query <strong><?php echo $_SESSION['Query'] ?></strong> Has Been Submitted We Will Respond To You As Soon As Possible<?php
+        $entry=explode("\n", $_SESSION['au']);
+        $i=0;
+        $value=trim($entry[$i]);
+        foreach ($entry as $value) {
+         ?>Your Query <strong style="font-size: 1.7em"><?php echo $entry[$i]; $i++; ?></strong> Has Been Submitted We Will Respond To You As Soon As Possible<br><?php
+       }
        }
        if($lp == 'anyway' )
        {

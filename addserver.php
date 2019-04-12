@@ -45,17 +45,20 @@ if(isset($_POST['query']))
           window.alert("Enter Query");
         </script><?php
   	 }
-  	 else
-  	 {
-  	 	if($Department == 'Select')
+  	 else if($Department == 'Select')
   	 	{
   	 		?><script>
           window.alert("Select Department");
         </script>
         <?php
   	 	}
-  	 	else
-  	 	{
+      else
+      {
+        $entry=explode("\n", $Query);
+        $i=0;
+        $value=trim($entry[$i]);
+        foreach ($entry as $value) 
+        {
 
   	 		$Date = date('y/m/d');
 
@@ -69,7 +72,7 @@ if(isset($_POST['query']))
 		    while($row = mysqli_fetch_array($sql,MYSQL_ASSOC))
 		    {
 		      $q = $row['Query'];
-		      similar_text($Query, $q,$percent);
+		      similar_text($entry[$i], $q,$percent);
 
 		      $query = "UPDATE Query SET Percentage=$percent WHERE Query='$q'";
 	        $x = mysqli_query($db,$query);
@@ -82,26 +85,27 @@ if(isset($_POST['query']))
 		    }
 		    if($high<70)
 		    {
-	        $query = "INSERT INTO Query(Name,Query,Department,Date,Status) values('$Name','$Query','$Department','$Date','Unsolved')";
+	        $query = "INSERT INTO Query(Name,Query,Department,Date,Status) values('$Name','$entry[$i]','$Department','$Date','Unsolved')";
 	        $q = mysqli_query($db,$query);
 
 	        $query = "CREATE OR REPLACE VIEW view AS SELECT Query,Department,Percentage,Statusz FROM Query WHERE Department='$Department'";
 	            $q = mysqli_query($db,$query);
 				
-              $_SESSION['Query'] = $Query; 
+              $_SESSION['Query'] = $entry[$i];
+              $_SESSION['au'] = $_POST['text']; 
 	            $_SESSION['Dept'] = $Department;
-              $_SESSION['lastpage'] = 'Add';
-              header('Location:Submit.php');  
+              $_SESSION['lastpage'] = 'Add';$i++;
+              header('Location:Submit.php');
           }
           else
           {
-              $_SESSION['Q'] = $Query; 
-            	$_SESSION['dep']=$Department;
-            	$_SESSION['qu']=$Query;
+              $_SESSION['Q'] = $entry[$i];
+            	$_SESSION['dep']=$Department; $i++;
 	            header('Location:similar.php');
           }
+        }
   	 	}
-  	 }
+  	 
   }
 
   if(isset($_POST['about']))

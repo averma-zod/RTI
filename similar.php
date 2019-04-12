@@ -31,7 +31,7 @@
 
        <div class="data" align="center">
 	    	<font style="font-size: 1.4em;font-family: garamond;font-weight: bold;">Your Query:</font>
-	    	<font style="font-size: 1.4em;font-family: garamond;font-weight: bold;color:slateblue"><?php echo $_SESSION['qu'];?></font><br>
+	    	<font style="font-size: 1.4em;font-family: garamond;font-weight: bold;color:slateblue"><?php echo $_SESSION['Q'];?></font><br>
 	        <font style="font-size: 1.5em; font-family: garamond">The Similar Queries are:</font>
 	    
 	    <?php  
@@ -64,22 +64,17 @@
 
 
 	            $xx=explode(" ", $q);
-	            $xy=explode(" ", $_SESSION['qu']);
+	            $xy=explode(" ", $_SESSION['Q']);
 	            $c=sizeof($xx);
 	            $l=sizeof($xy);
 
 	            
 	            for ($c=0; $c <sizeof($xy) ; $c++)
 	            { 
-	            	for ($l=0; $l <sizeof($xx) ; $l++)
-	            	{	
-	            		similar_text($xx[$l],$xy[$c],$per);
-	            		if($per>90)
-	            		{
-	            			$high="<b><font >$xx[$l]</font></b>";
-	            			$q=str_ireplace($xx[$l], $high, $q);
-	            		}
-	            	}
+	            	
+	            			$high="<b>$xy[$c]</b>";
+	            			$q=str_ireplace($xy[$c], $high, $q);
+	            		
 	            }
 
 	           	

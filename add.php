@@ -51,7 +51,7 @@
 	    <form method="POST" action="Add.php">
 	   &nbsp;Department*
 	   <br><br>
-		 <select class="select" style="background-color: #DCDCDC" name="Department">
+		 <select class="select" style="background-color: #DCDCDC" name="Department" >
 			<option hidden="">Select</option>
 			<option value="Medical">Medical</option>
 			<option value="Traffic">Traffic</option>
